@@ -1,0 +1,14 @@
+.rgs-color{
+    color: cornflowerblue;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+.btn-regular{
+    color: rgb(255, 0, 0);
+    background-color: yellow;
+}
+.submit{
+    background-color: yellowgreen;
+    color: brown;
+}

@@ -1,0 +1,18 @@
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .btn-regular{
+        color: rgb(14, 15, 15);
+        background-color: rgb(255, 153, 0);
+    }
+    .login-please{
+        
+        color: rgb(196, 16, 241);
+    }
+    .submit-login{
+        background-color: rgb(97, 5, 245);
+        color: cyan;
+        
+    }

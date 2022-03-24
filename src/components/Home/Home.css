@@ -1,0 +1,18 @@
+.welcome{
+    color: cornflowerblue;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+.we{
+    color: rgb(4, 35, 70);
+}
+.home-page{
+    display:flex;
+    color:black;
+}
+.join-now{
+    margin-left: 950px;
+    color: coral;
+
+}
