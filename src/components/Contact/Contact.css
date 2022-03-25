@@ -1,0 +1,22 @@
+.cnt-color{
+    color: crimson;
+}
+.email{
+    text-decoration: none;
+}
+.phone{
+    display: inline;
+    background-color: aqua;
+    color: darkmagenta; 
+}
+.contact-second{
+    color: darkgoldenrod;
+}
+.opening-hour{
+    color: coral;
+}
+.sun-close{
+    display: inline;
+    background-color: red;
+    color: rgb(238, 255, 0);
+}
