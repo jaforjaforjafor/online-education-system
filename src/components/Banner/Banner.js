@@ -8,46 +8,44 @@ const Banner = () => {
     return (
         <div>
              
-        <Carousel>
+             <Carousel fade>
   <Carousel.Item>
     <img
-      className="d-block w-100 h-50"
-      src={nogo}
+      className="d-block w-100"
+      src={pogo}
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>Studyig hard</h3>
-      <p>follow our instruction.</p>
+      <h3>OUr Education online</h3>
+      <p>new way of education system.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100 h-50"
-      src={pogo}
+      className="d-block w-100"
+      src={nogo}
       alt="Second slide"
     />
 
     <Carousel.Caption>
-      <h3>Gain Knowledge</h3>
-      <p>Check our courses</p>
+      <h3>Teacher doing his job</h3>
+      <p>in online system teacher doing his outstanding job .</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100 h-50"
+      className="d-block w-100"
       src={jogo}
       alt="Third slide"
     />
 
     <Carousel.Caption>
-      <h3 className='text-warning'>Success</h3>
-      <p className='text-danger'>Our Successful Students.</p>
-      
+      <h3>Students learning</h3>
+      <p>students online course.</p>
     </Carousel.Caption>
   </Carousel.Item>
+</Carousel>
   
-  </Carousel>
-  <br /><br />
         </div>
     );
 };

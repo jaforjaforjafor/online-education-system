@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <div>
           <Banner></Banner>
-          <Medium></Medium>
+           <Medium></Medium> 
           <Teachers></Teachers>
           <Courses></Courses>
           <Contact></Contact>

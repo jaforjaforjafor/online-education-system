@@ -6,7 +6,7 @@ import logo from '../Images/home-3.jpg';
 
 const Medium = () => {
     return (
-        <div>
+        <div >
             
         <div className='home-colour'>
           <h2> <span className='welcome'> Online-Education System </span> </h2> 
