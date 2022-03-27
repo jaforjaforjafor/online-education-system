@@ -53,7 +53,9 @@ const Medium = () => {
 </div>
 </div></div>
 </div>
+<h2 className='our-teacher-center '>Our Teachers</h2>
 </div>
+
 
 
             

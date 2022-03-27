@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 const Course = (props) => {
     const { _id,image,courses,price,description}=props.course;
     return (
+        
+                
+            
 
         <div className="col">
+            
                 <div className="card h-100 shadow-lg" >
                     <img src={image} className="card-img-top" width="500" height="500" alt="..." />
                     <div className="card-body">
