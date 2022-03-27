@@ -17,7 +17,7 @@ const Header = () => {
             <NavLink to ="/contact">Contact</NavLink>
             {/* <NavLink to ="/feedback">Feedback</NavLink> */}
             <NavLink to ="/ourcourses">Our Courses</NavLink>
-            { user.email &&<span style={{color: "green"}}>Hello {user.displayName} </span>}
+            { user.email &&<span style={{color: "yellow"}}>Hello {user.displayName} </span>}
            { 
            user.email ?
            <button onClick={logOut}> Log Out</button>

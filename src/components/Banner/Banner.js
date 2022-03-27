@@ -1,8 +1,9 @@
 import React from 'react';
+import './Banner.css';
 import { Carousel } from 'react-bootstrap';
-import pogo from '../Images/home-1.jpg';
-import nogo from '../Images/home-2.jpg';
-import jogo from '../Images/carousel-3.jpg';
+import pogo from '../Images/pic.jpeg';
+import nogo from '../Images/j (1).jpg';
+import jogo from '../Images/j (2).jpg';
 
 const Banner = () => {
     return (
@@ -11,38 +12,33 @@ const Banner = () => {
              <Carousel fade>
   <Carousel.Item>
     <img
-      className="d-block w-100"
+      className="banner-item-1"
       src={pogo}
       alt="First slide"
+      
     />
     <Carousel.Caption>
-      <h3>OUr Education online</h3>
-      <p>new way of education system.</p>
+      <h3>Online Education </h3>
+      <p>New way of education system.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100"
+      className="banner-item-2"
       src={nogo}
       alt="Second slide"
     />
 
-    <Carousel.Caption>
-      <h3>Teacher doing his job</h3>
-      <p>in online system teacher doing his outstanding job .</p>
-    </Carousel.Caption>
+   
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100"
+      className="banner-item-3"
       src={jogo}
       alt="Third slide"
     />
 
-    <Carousel.Caption>
-      <h3>Students learning</h3>
-      <p>students online course.</p>
-    </Carousel.Caption>
+  
   </Carousel.Item>
 </Carousel>
   
