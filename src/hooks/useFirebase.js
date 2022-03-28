@@ -6,6 +6,8 @@ initializeAuthentication()
 const useFirebase =()=>{
     const [user,setUser]=useState({});
     const [isLoading,setIsLoading]=useState(true);
+    const [authError, setAuthError] = useState('');
+    const [admin, setAdmin] = useState(false);
 
     const auth=getAuth();
 
@@ -13,7 +15,7 @@ const useFirebase =()=>{
     const signInUsingGoogle =()=>{
         setIsLoading(true);
         const googleProvider =new GoogleAuthProvider();
-        signInWithPopup(auth,googleProvider)
+         return signInWithPopup(auth,googleProvider)
         .then(result =>{
             setUser(result.user);
         })

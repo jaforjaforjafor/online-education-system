@@ -6,7 +6,7 @@ import cntc from './contact.pic';
 const Contact = () => {
     return (
         <div>
-            <h2>Contact Us</h2>
+            
         <h2 className=" text-center text-danger my-5"> Contact us</h2><br />
         <h3 className='contact-second'>Our details You can contact us by phone or on social media – whatever works for you. Just pick from the options below:</h3>
         <div  className='text-center'>

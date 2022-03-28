@@ -31,7 +31,7 @@ const Login = () => {
     
     const handleGoogleLogin=()=>{
         signInUsingGoogle(location,history)
-        .then(result =>{
+        .then(result  =>{
             history.push(redirect_url);
         })
        
@@ -54,6 +54,10 @@ const processLogin=(email,password)=>{
   
     }
     return (
+        <div className="container mt-4 bg-dark w-50" style={{ background: `linear-gradient(to right, #e6dada, #274046)` }}>
+            {isLoading && <div className="spinner-border text-info text-center" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>}
         <div className='login-form'>
             
             <div >
@@ -65,7 +69,7 @@ const processLogin=(email,password)=>{
                 <br /><br />
                 <input  className="submit-login" type="submit" value="submit" />
                 {user?.email && <div className="alert alert-success" role="alert">
-                    User created successFully!
+                    
                 </div>}
                 {authError && <div className="alert alert-danger" role="alert">
                     {authError}
@@ -78,6 +82,7 @@ const processLogin=(email,password)=>{
             className='btn-regular'
             >Google Sign In</button>
             </div>
+        </div>
         </div>
     );
 };

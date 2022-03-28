@@ -12,7 +12,7 @@ const Medium = () => {
         <div className='home-colour'>
           <h2> <span className='welcome'> Online Education System </span> </h2> 
            <p className='we'>We provide online-education, nowadays it is one of the best  education system,people like to admit this system,if you are interested please enroll.</p> 
-         </div>
+         </div><br /><br /><br />
         <div className='margin'>
         <div className="d-flex">
             <div className="mx-5">
