@@ -1,5 +1,6 @@
 .cnt-color{
     color: crimson;
+    
 }
 .email{
     text-decoration: none;
@@ -10,10 +11,13 @@
     color: darkmagenta; 
 }
 .contact-second{
-    color: darkgoldenrod;
+    color: rgb(5, 5, 5);
+    text-align: center;
+   
 }
 .opening-hour{
     color: coral;
+    font-family: 'Poppins', sans-serif;
 }
 .sun-close{
     display: inline;

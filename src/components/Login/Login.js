@@ -68,6 +68,7 @@ const processLogin=(email,password)=>{
                 <input type="password" name="" id="" placeholder='Enter Your password ' />
                 <br /><br />
                 <input  className="submit-login" type="submit" value="submit" />
+                <br /><br />
                 {user?.email && <div className="alert alert-success" role="alert">
                     
                 </div>}
@@ -81,7 +82,9 @@ const processLogin=(email,password)=>{
             onClick={handleGoogleLogin}
             className='btn-regular'
             >Google Sign In</button>
+            <br /><br />
             </div>
+            <br /><br />
         </div>
         </div>
     );

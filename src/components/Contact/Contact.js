@@ -7,8 +7,8 @@ const Contact = () => {
     return (
         <div>
             
-        <h2 className=" text-center text-danger my-5"> Contact us</h2><br />
-        <h3 className='contact-second'>Our details You can contact us by phone or on social media – whatever works for you. Just pick from the options below:</h3>
+        <h2 className=" text-center text-primary my-5"> Contact us</h2><br />
+        <p className='contact-second'>Our details You can contact us by phone or on social media  whatever works for you. Just pick from the options below:</p>
         <div  className='text-center'>
             <img src={cntc} alt="" />
             <br />
@@ -22,8 +22,8 @@ const Contact = () => {
 <h4>fri 09.00am - 05.30pm</h4><br />
 <h4>Sat 09.00am - 02.30pm</h4><br />
 <h4 className='sun-close'>Sun closed</h4><br /><br />
-<h6 className='text-dark'>Calling about a claim? We're here 24/7, all year round on: 000022222000 Social: You can catch us on Twitter or Facebook, or find your favourite platform on our social homepage.</h6>
-<a>www.facebook.com/jaforiqbal</a>
+<h6 className='text-dark'>Calling about a claim? We're here 24/7, all year round on:01911131006 Social: You can catch us on Twitter or Facebook, or find your favourite platform on our social homepage.</h6>
+<a>www.facebook.com/jaforiqbal</a><br /><br />
 <h4>Email us: <a className="email" href="">jafor365iqbal@gmail.com</a> OR <a className="email" href="">lionelsharmi10@gmail.com</a></h4>
  
 

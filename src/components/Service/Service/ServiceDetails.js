@@ -18,7 +18,7 @@ const ServiceDetails = () => {
         <div>
             <div className="container mt-4  ">
             <div className="row justify-content-center align-items-center ">
-                <div className="w-50">
+                <div className="w-100">
                     <div className="card h-100 shadow-lg">
                         <img src={image} className="card-img-top " alt="..." />
                         <div className="card-body">

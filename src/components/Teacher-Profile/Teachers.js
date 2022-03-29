@@ -27,7 +27,7 @@ const Teachers = () => {
 
       </div>
       <br /><br />
-      <h2 className='course-center'>Our Courses</h2><br /><br />
+     
 </div>
     );
 };

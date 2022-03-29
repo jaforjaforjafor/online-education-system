@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 const Teacher = (props) => {
     const { _id,name,image,email,expert,designation}=props.teacher;
     return (
+        
         <div className="col-12  mx-1 my-1 ">
+            <br /><br />
         <div className="card h-100   shadow-lg" >
             <img src={image} className="card-img-top" width="450" height="150" alt="..." />
             <div className="card-body h-100 w-400">
