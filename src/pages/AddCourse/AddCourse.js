@@ -20,13 +20,14 @@ const AddCourse = () => {
         <div className='add-course'>
             <h2 className='text-center'>please add a course. </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
+       
 
-            <input {...register("Course", { required: true, maxLength: 20 })} 
-            placeholder="Name"/> 
+            <input {...register("courses", { required: true, maxLength: 20 })} 
+            placeholder="course Name"/> 
             <input type="number" {...register("price" )}
               placeholder="Price" /> <br></br>
             <textarea {...register("description" )}
-              placeholder="Description" /> 
+              placeholder="description" /> 
             <input {...register("img", )}
               placeholder="Image Url" /> 
             <input type="submit" />

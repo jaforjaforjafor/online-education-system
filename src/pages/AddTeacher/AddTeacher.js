@@ -21,13 +21,13 @@ const AddTeacher = () => {
             <h2 className='text-center'>please add Teacher. </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
 
-            <input {...register("Course", { required: true, maxLength: 20 })} 
+            <input {...register("name", { required: true, maxLength: 20 })} 
             placeholder="Name"/> 
-            <input {...register("Course", { required: true, maxLength: 20 })} 
+            <input {...register("email", { required: true, maxLength: 30 })} 
             placeholder="email"/> 
-               <textarea {...register("description" )}
+               <textarea {...register("designation" )}
               placeholder="Designation" /> 
-           <input {...register("Course", { required: true, maxLength: 20 })} 
+           <input {...register("expert", { required: true, maxLength: 20 })} 
             placeholder="expert"/> 
             <input {...register("img", )}
               placeholder="Image Url" /> 

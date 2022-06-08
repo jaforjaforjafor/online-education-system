@@ -15,7 +15,7 @@ const Course = (props) => {
             <div className="card h-100 shadow-lg  " >
                 <img src={image} className="card-img-top"  height="350" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">{courses}</h5>
+                    <h5 className="card-title"> Courses: {courses}</h5>
                     <p className="card-text"> <strong>Description:</strong> {description}</p>
                     <p className="text-nowrap"><strong >Price:</strong>{price}</p>
                     <Link to={`/purchase/${_id}`}>
