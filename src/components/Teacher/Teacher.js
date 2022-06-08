@@ -16,7 +16,7 @@ const Teacher = (props) => {
                 <p className="text-nowrap"><strong >expert:</strong>{expert}</p>
                 <Link to={`/service/${_id}`}>
                 <button className="btn btn-dark"><img  alt="" width="25" />
-                 contact {name.toLowerCase()}</button>
+                 contact {name}</button>
                 </Link>
                
             </div>

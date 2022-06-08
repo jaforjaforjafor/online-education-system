@@ -16,6 +16,8 @@ import Register from "./components/Register/Register";
 import ServiceDetails from "./components/Service/Service/ServiceDetails";
 import Teachers from "./components/Teacher-Profile/Teachers";
 import AuthProvider from './context/AuthProvider';
+import AddCourse from "./pages/AddCourse/AddCourse";
+import AddTeacher from "./pages/AddTeacher/AddTeacher";
 
 
 function App() {
@@ -51,6 +53,12 @@ function App() {
           </Route>
           <Route path="/ourcourses">
             <Courses></Courses>
+          </Route>
+          <Route path="/addcourse">
+            <AddCourse></AddCourse>
+          </Route>
+          <Route path="/addteacher">
+            <AddTeacher></AddTeacher>
           </Route>
           <Route path="/admin">
             <Admin></Admin>

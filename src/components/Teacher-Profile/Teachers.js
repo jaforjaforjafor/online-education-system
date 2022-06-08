@@ -5,7 +5,7 @@ import './Teachers.css';
 const Teachers = () => {
   const [teachers,setTeachers]=useState([]);
   useEffect( ()=>{
-    fetch('./teacherdata.json')
+    fetch('http://localhost:5000/teachers')
     .then(res=>res.json())
     .then(data=> setTeachers(data))
 
