@@ -7,21 +7,21 @@ const Purchase = () => {
     const[purchase,setPurchase]=useState([]);
     
     useEffect(() => {
-        fetch("/coursedata.json")
+        fetch("http://localhost:5000/courses")
             .then(res => res.json())
             .then((data) => {
                 const foundPurchase= data.filter(detail => detail._id == id)
                 setPurchase(foundPurchase);
             })
     }, [])
-    const { courses, description, image, price } = purchase[0] || {}
+    const { courses, description, img, price } = purchase[0] || {}
     return (
         <div>
             <div className="container mt-4  ">
             <div className="row justify-content-center align-items-center ">
                 <div className="w-100">
                     <div className="card h-100 shadow-lg">
-                        <img src={image} className="card-img-top " alt="..." />
+                        <img src={img} className="card-img-top " alt="..." />
                         <div className="card-body">
 
                             <h2 className="text-nowrap"><strong >Service:{courses}</strong></h2>

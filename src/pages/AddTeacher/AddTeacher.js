@@ -16,25 +16,27 @@ const AddTeacher = () => {
   })
   }
   
+  
     return (
         <div className='add-teacher'>
-            <h2 className='text-center'>please add Teacher. </h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+    <h2 className='text-center'>please add Teacher. </h2>
+    <form onSubmit={handleSubmit(onSubmit)}>
 
-            <input {...register("name", { required: true, maxLength: 20 })} 
-            placeholder="Name"/> 
-            <input {...register("email", { required: true, maxLength: 30 })} 
-            placeholder="email"/> 
-               <textarea {...register("designation" )}
-              placeholder="Designation" /> 
-           <input {...register("expert", { required: true, maxLength: 20 })} 
-            placeholder="expert"/> 
-            <input {...register("img", )}
-              placeholder="Image Url" /> 
-            <input type="submit" />
+    <input {...register("teachers", { required: true, maxLength: 20 })} 
+    placeholder="Name"/> 
+    <input {...register("email", { required: true, maxLength: 30 })} 
+    placeholder="email"/> 
+    <textarea {...register("designation" )}
+    placeholder="Designation" /> 
+    <input {...register("expert", { required: true, maxLength: 20 })} 
+    placeholder="expert"/> 
+    <input {...register("img", )}
+        placeholder="Image Url" /> 
+    <input type="submit" />
 
-       </form>
-        </div>
+</form>
+</div>
+        
     );
 };
 

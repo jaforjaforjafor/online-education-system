@@ -54,6 +54,9 @@ function App() {
           <Route path="/ourcourses">
             <Courses></Courses>
           </Route>
+          <Route path="/courses">
+            <Courses></Courses>
+          </Route>
           <Route path="/addcourse">
             <AddCourse></AddCourse>
           </Route>
