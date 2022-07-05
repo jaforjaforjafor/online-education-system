@@ -1,10 +1,11 @@
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import "./Login.css";
+import loginRightPic from '../Images/education pic.jpg';
 
 const Login = () => {
     const [loginData,setLoginData]=useState({});
@@ -16,7 +17,6 @@ const Login = () => {
    
     const location=useLocation();
     const history =useHistory();
-    const redirect_url=location.state?.from ||'/';
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -25,29 +25,27 @@ const Login = () => {
         setLoginData(newLoginData);
     }
     const handleLoginSubmit = e => {
-        loginUser(loginData.email, loginData.password, location, history);
+         loginUser(loginData.email, loginData.password, location, history);
         e.preventDefault();
     }
     
     const handleGoogleLogin=()=>{
         signInUsingGoogle(location,history)
-        .then(result  =>{
-            history.push(redirect_url);
-        })
+        
        
        
 
 
-const processLogin=(email,password)=>{
-    signInWithEmailAndPassword(auth, email, password)
-    .then(result =>{
-        const user =result.user;
-        console.log(user);
-    })
-    .catch((error) => {
-    setError( error.message);
-      });
-}
+// const processLogin=(email,password)=>{
+//     signInWithEmailAndPassword(auth, email, password)
+//     .then(result =>{
+//         const user =result.user;
+//         console.log(user);
+//     })
+//     .catch((error) => {
+//     setError( error.message);
+//       });
+// }
 
   
   
@@ -58,21 +56,23 @@ const processLogin=(email,password)=>{
             {isLoading && <div className="spinner-border text-info text-center" role="status">
                 <span className="visually-hidden">Loading...</span>
             </div>}
+            
         <div className='login-form'>
+            
             
             <div >
             <h2 className='login-please'>Please Login</h2>
             <form onSubmit={handleLoginSubmit}>
 
-                <input onBlur={handleOnChange} type="email" name="" id="" placeholder='Enter Your Email ' /><br /><br />
-                <input type="password" name="" id="" placeholder='Enter Your password ' />
+                <input  type="email" name="email" onChange={handleOnChange} id="" placeholder='Enter Your Email ' /><br /><br />
+                <input type="password" name="password" onChange={handleOnChange} id="" placeholder='Enter Your password ' />
                 <br /><br />
                 <input  className="submit-login" type="submit" value="submit" />
                 <br /><br />
                 {user?.email && <div className="alert alert-success" role="alert">
                     
-                </div>}
-                {authError && <div className="alert alert-danger" role="alert">
+                user  is login </div>}
+                {authError && <div className="alert alert-danger" role="alert">user already exist
                     {authError}
                 </div>}
             </form>
@@ -85,7 +85,11 @@ const processLogin=(email,password)=>{
             <br /><br />
             </div>
             <br /><br />
+           
         </div>
+        <div>
+           <img src={loginRightPic} alt=""   />
+           </div>
         </div>
     );
 };

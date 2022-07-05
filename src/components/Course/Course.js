@@ -16,7 +16,7 @@ const Course = (props) => {
                     <p className="text-nowrap"><strong >Price:</strong>{price}</p>
                     <Link to={`/purchase/${_id}`}>
                     <button className="btn btn-dark"><img  alt="" width="25" />
-                     Purchase {courses}</button>
+                     Purchase: {courses}</button>
                     </Link>
                    
                 </div>

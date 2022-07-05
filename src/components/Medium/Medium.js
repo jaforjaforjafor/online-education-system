@@ -24,8 +24,9 @@ const Medium = () => {
            
         </div>
        
+        <h1 className='features'>Our Features</h1>
         <div className="container">
-        <h1 className='text-center my-5 text-primary'>Our Features</h1>
+       
 <div className="row">
 <div className="col-sm"> <div className="card">
 <img className="card-img-top" src={pogo} alt=""  height="250px"/>
@@ -47,13 +48,13 @@ const Medium = () => {
 <div className="col-sm"> <div className="card">
 <img className="card-img-top" src={ogo} alt=""  height="250px"/>
 <div className="card-body">
-<h5 className="card-title">Succesful Exam</h5>
+<h5 className="card-title">Successful Exam</h5>
 <p className="card-text"> after Successful  online  exam the student feels like he is happy .</p>
 
 </div>
 </div></div>
 </div>
-<h2 className='our-teacher-center '>Our Teachers</h2>
+
 </div>
 
 

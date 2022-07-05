@@ -1,0 +1,42 @@
+.no-margin{
+    margin: 0px;
+  }
+    .transparent {
+      background-color: transparent;
+    }
+    .absolute-full-width {
+        position: absolute;
+        width: 100%;
+    }
+    /*
+    *
+    * HERE IT IS WHERE IT BEGINS.
+    *
+    */
+    .showcase{
+      overflow: hidden;
+      color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      position: relative;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      margin: auto;
+      /*
+      *
+      * HERE IS THE SECRET
+      * MAKE SURE TO ALWAYS USE A LINEAR-GRADIENT VALUE
+      * THE FIRST ONE WILL BE FOR A BLACK OPACITY
+      * THE SECOND ONE (COMMENTED) WILL BE FOR A WHITE OPACITY
+      *
+      */
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%) , url(https://wallpapercave.com/wp/wp2168363.jpg);
+      
+      /*** WHITE OPACITY ***/
+      /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%,rgba(255, 255, 255, 0.7) 100%), url(https://images.pexels.com/photos/34676/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);*/
+    }

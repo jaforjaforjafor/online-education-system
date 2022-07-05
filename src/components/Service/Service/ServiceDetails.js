@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import './ServiceDetails.css';
 
 const ServiceDetails = () => {
+    
     const {id}=useParams();
     const[serviceDetails,setServiceDetails]=useState([]);
     useEffect(() => {
@@ -12,7 +14,8 @@ const ServiceDetails = () => {
                 setServiceDetails(foundService);
             })
     }, [])
-    const { teachers, designation, img, email,expert } = serviceDetails[0] || {}
+    const { teachers, designation, img, email,expert } = serviceDetails[0] || {};
+    
 
     return (
         <div>
@@ -28,6 +31,10 @@ const ServiceDetails = () => {
 
                             <p className="text-nowrap"><strong >email:{email}</strong>  </p>
                             <p className="text-nowrap"><strong >expert:{expert}</strong>  </p>
+                            
+                            <a href="https://mail.google.com">Contact Me </a>
+
+                    
                         </div>
 
                     </div>

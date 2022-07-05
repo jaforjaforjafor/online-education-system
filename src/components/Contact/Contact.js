@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <div>
             
-        <h2 className=" text-center text-primary my-5"> Contact us</h2><br />
+        <h2 className=" text-center text-primary my-5 fs-2"> Contact Us</h2><br />
         <p className='contact-second'>Our details You can contact us by phone or on social media  whatever works for you. Just pick from the options below:</p>
         <div  className='text-center'>
             <img src={cntc} alt="" />

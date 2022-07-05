@@ -2,6 +2,8 @@ import { Route,  Switch } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min";
 import Admin from "./components/Admin/Admin";
 import Contact from "./components/Contact/Contact";
+import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import EmailSir from "./components/EmailSir/EmailSir";
 import Feedback from "./components/Feedback/Feedback";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -39,6 +41,9 @@ function App() {
           <PrivateRoute path="/payment">
             <Payment></Payment>
           </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+            <Dashboard></Dashboard>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
@@ -62,6 +67,9 @@ function App() {
           </Route>
           <Route path="/addteacher">
             <AddTeacher></AddTeacher>
+          </Route>
+          <Route path="/email">
+            <EmailSir></EmailSir>
           </Route>
           <Route path="/admin">
             <Admin></Admin>

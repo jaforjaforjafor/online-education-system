@@ -10,7 +10,8 @@ const Payment = () => {
     return (
         <div>
             <h2 className='payment-color text-center'>Payment</h2><br /><br />
-             <a hRef="" className="mx-1 btn btn-primary"><img src={nogod} alt=""  height="100px" /></a>
+             <a href='' className="mx-1 btn btn-primary"
+             ><img src={nogod} alt=""  height="100px" /></a>
              <a hRef="" className="mx-1 btn btn-primary"><img src={rocket} alt=""  height="100px"/></a>
              <a hRef="" className=" mx-1 btn btn-primary"><img src={bkash} alt=""  height="100px"/></a>
              <a hRef="" className=" mx-1 btn btn-primary"><img src={visa} alt=""  height="100px"/></a>

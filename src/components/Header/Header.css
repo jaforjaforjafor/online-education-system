@@ -1,42 +1,14 @@
-.header nav a{
-    text-decoration: none;
-    color: cornsilk;
-    margin-right: 20px;
-    padding: 5px;
-    font-size: 1.5rem;
-    font-family: 'Ubuntu' , sans-serif;
-    align-items: center;
-    justify-content: center;
-    
-    
-    
+.navbar-custom{
+    color: white;
+    background-color: #212529;
+}
+.user{
+    width: 35px;
+    background-color: white;
+    border-radius: 25px;
 }
 .header nav a:hover{
     background-color:blue ;
     border-radius: 10px;
     border: solid 1px;
 }
-.header{
-    background-color:black;
-   
-    
-    
-}
-
-    .contact{
-        margin-left: 300px;
-    }
-    .navtool{
-        margin-top: 0px;
-        margin-left: 5px;
-        margin-right: 5px;
-        padding:5px ;
-        
-    }
-    .welcome-header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(133, 228, 220);
-
-    }

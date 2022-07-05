@@ -15,7 +15,7 @@ const Courses = () => {
 
      <div>
        <br />
-        <h2 className='course-center'>Our Courses</h2><br /><br />
+        <h2 className='course-center fs-1'>Our Courses</h2><br /><br />
        <div className='row row-cols-1 row-cols-3 g-4 mx-20 my-20'>
 
          { 

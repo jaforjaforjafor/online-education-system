@@ -1,65 +1,111 @@
-import { getAuth ,createUserWithEmailAndPassword } from 'firebase/auth';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Register.css';
+import React, { useState,  } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+
+
 
 const Register = () => {
-    const [email,setEmail]=useState('');
-    const [password,setPassword]=useState('');
-    const [error,setError]=useState('');
+    const [loginData, setLoginData] = useState({});
+    
+    
+    
 
-    const auth = getAuth();
-    const handleEmailChange= e =>{
-        setEmail(e.target.value);
+    const history = useHistory();
+    const { user, registerUser, isLoading, authError } = useAuth();
+
+    const handleOnBlur = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newLoginData = { ...loginData };
+        newLoginData[field] = value;
+        setLoginData(newLoginData);
     }
-    const handlePasswordChange = e =>{
-        setPassword(e.target.value);
-    }
-    const handleregistration= e =>{
+
+    const handleLoginSubmit = e => {
+        if (loginData.password !== loginData.password2) {
+            alert('Your password did not match');
+            
+            return;
+        }
+        if(loginData.password.length <6){
+            alert('password must be at least 6 characters long');
+            return;
+            
+        }
+        if(!/(?:[^A-Z]*[A-Z])/.test(loginData.password)){
+            alert('password must contain 2 upper case');
+            return;
+            
+        }
+        
+        registerUser(loginData.email, loginData.password, loginData.name, history);
         e.preventDefault();
-        console.log(email, password);
-        if(password.length <6){
-            setError('password must be at least 6 characters long');
-            return;
-        }
-        if(!/(?:[^A-Z]*[A-Z])/.test(password)){
-            setError('password must contain 2 upper case');
-            return;
-        }
-        createUserWithEmailAndPassword(auth,email,password)
-        .then(result =>{
-            const user =result.user;
-            console.log(user);
-            setError('');
-        })
-        .catch(error =>{
-            setError(error.message);
-        })
-       
-
     }
     return (
-        <div className='rgs-color mx-5'>
-            <div>
+        <div className="container mt-4 bg-dark w-50" style={{ background: `linear-gradient(to right, #4b6cb7, #182848)` }}>
+            <h3 className="mt-5 text-center text-info fw-bolder ">Register Form</h3>
+            {
+                !isLoading && <form onSubmit={handleLoginSubmit} >
+                    <input className="mb-4 "
+                        style={{ width: '100%' }}
+                        label="Your Name"
+                        name="name"
+                        type="text"
+                        placeholder="Your Name"
+                        onBlur={handleOnBlur}
+                        required
+                    />
+                    <br />
+                    <input
+                        style={{ width: '100%' }}
+                        label="Your Email"
+                        name="email"
+                        type="email"
+                        placeholder="Your Email"
+                        onBlur={handleOnBlur}
+                        required
+
+                        />
+                    <br />
+                    <input className="mt-4"
+                        style={{ width: '100%' }}
+                        label="Your Password"
+                        type="password"
+                        name="password"
+                        placeholder="Your Password"
+                        onBlur={handleOnBlur} />
+                          
+                                        
+                    <br />
+
+                    <input className="mt-4"
+                        style={{ width: '100%' }}
+                        label="ReType Your Password"
+                        type="password"
+                        name="password2"
+                        placeholder="Re-type Password"
+                        onBlur={handleOnBlur} />
+                    <br />
+                    <button className="btn btn-info mt-2 mb-2" type="submit">Register</button>
+
+
+                    <p className="text-white fw-bolder">Already have a account? Please <Link className="text-decoration-none text-info" to="/login">login</Link></p>
+
+                </form>}
+            {isLoading && <div className="spinner-border text-info" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>}
+            {user?.email && <div className="alert alert-success" role="alert">
+                User created successFully!
                 
-            <h2 >Register:Create Account</h2>
-            <form onSubmit={handleregistration}>
-                <input type="text" name="" id="" placeholder='Enter your first name' required /><br /><br />
-                <input type="text" name="" id="" placeholder='Enter your last name' required/><br /><br />
-                <input onBlur={handleEmailChange} type="email" name="" id="" placeholder='Enter your Email' required /><br /><br />
-                <input type="password" name="" id="" placeholder='Enter your Password' required/><br /><br />
-                <input onBlur={handlePasswordChange} type="password" name="" id="" placeholder='Confirm your password' required  />
-                <br /><br />
-                <input type="number" name="" id="" placeholder='Phone Number' required /><br /><br />
-                <div className='text-danger'>{error}</div>
-                <input  className='submit' type="submit" value="submit" /><br /><br />
-            </form>
-            <p>Already have an account? <Link to ="/login">please login</Link> </p>
-            <div>-------OR--------</div>
-            <button className='btn-regular'>Google Sign In</button>
-            </div>
+            </div>}
+            {authError && <div className="alert alert-danger" role="alert">
+                {authError}
+            </div>}
+
+
         </div>
     );
 };
-
+//register 7min 
 export default Register;

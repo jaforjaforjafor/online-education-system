@@ -16,6 +16,7 @@ const Teachers = () => {
     return (
         
       <div className='container-fluid'>
+        <h2 className='our-teacher-center fs-1 '>Our Teachers</h2>
       <div className='row row-cols-1 row-cols-3 g-2'>
 
         { 

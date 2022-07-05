@@ -1,7 +1,13 @@
-.login-form{
-    display: flex;
+
+.container{display: flex;
     justify-content: center;
     align-items: center;
+
+}
+.login-form{
+    
+    margin-right: 100px;
+    
     }
     .btn-regular{
         color: rgb(14, 15, 15);
@@ -9,10 +15,16 @@
     }
     .login-please{
         
-        color: rgb(236, 215, 241);
+        color: rgb(182, 24, 221);
     }
     .submit-login{
         background-color: rgb(97, 5, 245);
         color: cyan;
         
+    }
+    .container img{
+        width: 60%;
+        height: 60%;
+        margin-bottom: 85px;
+        margin-left: 135px;
     }

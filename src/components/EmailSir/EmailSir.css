@@ -1,0 +1,15 @@
+.email-me{
+    margin-top: 20px;
+    color: rgb(48, 77, 3);
+    text-align: center;
+}
+.facebook{
+    text-align: center;
+    color: blue;
+
+}
+.facebook a{
+    color: brown;
+    background-color: aqua;
+    border-radius: 10px;
+}
