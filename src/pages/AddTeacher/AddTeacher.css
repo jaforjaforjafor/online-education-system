@@ -1,3 +1,6 @@
+.add-teacher{
+    background-color: darkgray;
+}
 .add-teacher form{
     display: flex;
     flex-direction: column;

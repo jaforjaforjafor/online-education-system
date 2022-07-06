@@ -1,32 +1,14 @@
-.sidebar1 {
-    background: #212529;
-    padding: 0px;
-    height: auto;
-   
-}
-.logo {
-    max-height: 130px;
-}
-.logo>img {
-    margin-top: 30px;
-    padding: 3px;
-    border: 3px solid white;
-   
-}
 .list {
     color: #fff;
     list-style: none;
     padding-left: 0px;
-}
+};
 .list::first-line {
     color: rgba(255, 255, 255, 0.973);
 }
-.list> li, h5 {
-    padding: 5px 0px 5px 40px;
+.back{
+    background-color: aqua;
 }
-
-.main-content{
-text-align:center;
-
-
+.color-down{
+    background-color: black;
 }

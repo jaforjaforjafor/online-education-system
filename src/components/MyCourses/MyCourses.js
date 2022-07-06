@@ -11,7 +11,7 @@ const MyCourses = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setMyCourses(data));
-    }, [])
+    }, [user.email])
 
     const handleDelete = id => {
         const url = `http://localhost:5000/purchase/${id}`;

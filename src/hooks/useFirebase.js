@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAuth, signInWithPopup, GoogleAuthProvider,onAuthStateChanged,signOut, getIdToken, createUserWithEmailAndPassword, signInWithEmailAndPassword,updateProfile } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider,onAuthStateChanged,signOut, getIdToken, createUserWithEmailAndPassword, signInWithEmailAndPassword,updateProfile, } from "firebase/auth";
 import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication()
@@ -100,7 +100,7 @@ const useFirebase =()=>{
 
             
         });
-    },[]);
+    },[auth]);
     useEffect(()=>{
         fetch(`http://localhost:5000/users/${user.email}`)
         .then(res =>res.json())

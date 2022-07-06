@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const ManageCourses = () => {
     const [manageCourses, setManageCourses] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/manageCourses')
+        fetch(`http://localhost:5000/manageCourses`)
             .then(res => res.json())
             .then(data => setManageCourses(data))
     }, [])

@@ -1,3 +1,6 @@
+.add-course{
+    background-color: blueviolet;
+}
 .add-course form{
     display: flex;
     flex-direction: column;

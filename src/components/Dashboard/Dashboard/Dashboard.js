@@ -18,48 +18,67 @@ const Dashboard = () => {
     let { path, url } = useRouteMatch();
      const { admin } = useAuth();
     return (
+        <>
         <div>
           
-              <li>
-                <ul>
-                  
-            <button className=" btn-light rounded-pill border-0 mt-2 w-50">
+              
+                <ul className='list'>
+                {
+                                !admin &&
+                                 <li>
+                                     <h2 >DashBoard</h2>
+                                     <button className=" btn-light rounded-pill border-0 mt-2 w-50">
              <Link to={`${url}/purchase`} className="nav-link text-black">my Purchase</Link> </button> <br />
             <button className=" btn-light rounded-pill border-0 mt-2 w-50">
              <Link to={`${url}/review`} className="nav-link text-black">Review</Link> </button> <br />
-            {admin && <div>
-              <button className=" btn-light rounded-pill border-0 mt-2 w-50"> 
-              <Link to={`${url}/addcourse`} className="nav-link text-black">Add Course </Link></button> <br />
-          
-              <button className=" btn-light rounded-pill border-0 mt-2 w-50"> 
-          <Link to={`${url}/makeAdmin`} className="nav-link text-black"> Make Admin</Link> </button><br />
-         < button className=" btn-light rounded-pill border-0 mt-2 w-50">
-          <Link to={`${url}/addteacher`} className="nav-link text-black">Add Teacher</Link> </button><br />
-          <button className=" btn-light rounded-pill border-0 mt-2 w-75">
-                                        <Link to={`${url}/manageAllOrders`} className="nav-link text-black text-nowrap text-center">Manage All purchase</Link>
-                                    </button>
-                                    <br />
 
-                                    <button className=" btn-light rounded-pill border-0 mt-2 w-75">
-                                        <Link to={`${url}/manageCourses`} className="nav-link text-black text-nowrap ">Manage Courses</Link>
-                                    </button>
+                                 </li>
+                             }
+                             </ul>
+
+                  
+           <ul className='list'>
+            {admin && <div className='back'>
+                <li >
+              <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3"> 
+                <Link to={`${url}/addcourse`} className="nav-link text-black">Add Course </Link>
+             </button> <br />
+          
+              <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3"> 
+                <Link to={`${url}/makeAdmin`} className="nav-link text-black"> Make Admin</Link> 
+               </button><br />
+         < button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
+                <Link to={`${url}/addteacher`} className="nav-link text-black">Add Teacher</Link> 
+         </button><br />
+
+          <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
+             <Link to={`${url}/manageAllOrders`} className="nav-link text-black text-nowrap text-center">Manage All purchase</Link>
+         </button><br />
+                                    
+
+          <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
+                <Link to={`${url}/manageCourses`} className="nav-link text-black text-nowrap ">Manage Courses</Link>
+          </button><br /><br />
+                                    </li>
             </div> }
                 </ul>
             
 
-             </li>
              
+             
+                <div  className="col-md-10 col-sm-8 main-content  ">
         
         <Switch>
+        <Route exact path={path}>
+            <DashboardHome></DashboardHome>
+          </Route>
         <Route path={`${path}/purchase`}>
                  <MyCourses></MyCourses>
              </Route> 
              <Route path={`${path}/review`}>
                  <Review></Review>
              </Route>
-          <Route exact path={path}>
-            <DashboardHome></DashboardHome>
-          </Route>
+          
           <AdminRoute path={`${path}/manageAllOrders`}>
                      <ManageAllCourses></ManageAllCourses>
                  </AdminRoute>
@@ -77,111 +96,13 @@ const Dashboard = () => {
                     <ManageCourses></ManageCourses>
                 </AdminRoute>
                </Switch>
+
+               </div>
+               </div>
+               </>
                
 
-        </div>
-        // <div style={{ background: `linear-gradient(to right, #92a8d1, #f18973) ` }}>
-        //     <div className="row">
-        //         <div className="col-md-2 col-sm-4 sidebar1">
-
-        //             <br />
-        //             <div className="left-navigation">
-        //                 <ul className="list">
-        //                     {
-        //                         !admin &&
-        //                         <li>
-        //                             <h2 >DashBoard</h2>
-
-        //                             {/* <button className=" btn-light rounded-pill border-0 mt-2 w-50">
-        //                                 <Link to={`${url}/payment`} className="nav-link text-black">Payment</Link>
-        //                             </button> */}
-
-        //                             <br />
-        //                             <button className=" btn-light rounded-pill border-0 mt-2 w-50">
-        //                                 <Link to={`${url}/seecourse`} className="nav-link text-black">My Courses</Link></button>
-
-        //                             <br />
-        //                             <button className=" btn-light rounded-pill border-0 mt-2 w-50">
-        //                                 <Link to={`${url}/review`} className="nav-link text-black">Review</Link>
-        //                             </button>
-        //                         </li>
-        //                     }
-
-
-
-
-
-        //                 </ul>
-
-        //                 <ul className="list">
-        //                     {
-        //                         admin &&
-        //                         <li>
-        //                             <h2>DashBoard</h2>
-        //                             <button className=" btn-light rounded-pill border-0 mt-2 w-75">
-        //                                 <Link to={`${url}/makeadmin`} className="nav-link text-black text-nowrap text-center">Make Admin</Link>
-        //                             </button>
-
-        //                             <br />
-
-        //                             <button className=" btn-light rounded-pill border-0 mt-2 w-75">
-        //                                 <Link to={`${url}/addcourse`} className="nav-link text-black text-nowrap text-center">Add a Course</Link>
-        //                             </button>
-        //                             <button className=" btn-light rounded-pill border-0 mt-2 w-75">
-        //                                 <Link to={`${url}/addteacher`} className="nav-link text-black text-nowrap text-center">Add  Teacher</Link>
-        //                             </button>
-
-        //                             <br />
-
-        //                             <button className=" btn-light rounded-pill border-0 mt-2 w-75">
-        //                                 <Link to={`${url}/makeAdmin`} className="nav-link text-black text-nowrap ">Make Admin</Link>
-        //                             </button>
-
-
-        //                         </li>
-
-        //                     }
-
-        //                 </ul>
-
-
-        //             </div>
-        //         </div>
-
-        //         <div className="col-md-10 col-sm-8 main-content">
-        //             <Switch>
-                        
-        //              <Route path={`${path}/courses`}>
-        //                     <MyCourses></MyCourses>
-        //                 </Route> 
-        //                 <Route path={`${path}/review`}>
-        //                     <Review></Review>
-        //                 </Route>
-        //                 <Route exact path={`${path}/`}>
-        //                     <DashboardHome></DashboardHome>
-        //                 </Route>
-        //                 <AdminRoute path={`${path}/manageallcourses`}>
-        //                     <ManageAllCourses></ManageAllCourses>
-        //                 </AdminRoute>
-        //                 <AdminRoute path={`${path}/addcourse`}>
-        //                     <AddCourse></AddCourse>
-        //                 </AdminRoute>
-        //                 <AdminRoute path={`${path}/addteacher`}>
-        //                     <AddTeacher></AddTeacher>
-        //                 </AdminRoute>
-        //                 <AdminRoute path={`${path}/makeadmin`}>
-        //                     <MakeAdmin></MakeAdmin>
-        //                 </AdminRoute>
-        //                 <AdminRoute path={`${path}/manageCourses`}>
-        //                     <ManageCourses></ManageCourses>
-        //                 </AdminRoute>
-                        
-        //             </Switch> 
-
-        //         </div>
-        //     </div>
-
-        // </div >
+        
     );
 };
 

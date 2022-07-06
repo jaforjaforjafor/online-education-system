@@ -17,7 +17,7 @@ const Review = () => {
 
                 console.log(res);
                 if (res.data.insertedId) {
-                    alert('Added Successfully');
+                    alert(' rating Added Successfully');
 
                 }
             })
