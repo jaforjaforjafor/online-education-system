@@ -18,8 +18,10 @@ const Dashboard = () => {
     let { path, url } = useRouteMatch();
      const { admin } = useAuth();
     return (
-        <>
-        <div>
+        
+          <div style={{ background: `linear-gradient(to right, #ffd194,#70e1f5) ` }}>
+            <div className="row">
+                <div className="col-md-2 col-sm-4 sidebar1">
           
               
                 <ul className='list'>
@@ -27,9 +29,9 @@ const Dashboard = () => {
                                 !admin &&
                                  <li>
                                      <h2 >DashBoard</h2>
-                                     <button className=" btn-light rounded-pill border-0 mt-2 w-50">
-             <Link to={`${url}/purchase`} className="nav-link text-black">my Purchase</Link> </button> <br />
-            <button className=" btn-light rounded-pill border-0 mt-2 w-50">
+                                     <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
+             <Link to={`${url}/purchase`} className="nav-link text-black fs-4">my Purchase</Link> </button> <br />
+            <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
              <Link to={`${url}/review`} className="nav-link text-black">Review</Link> </button> <br />
 
                                  </li>
@@ -39,16 +41,17 @@ const Dashboard = () => {
                   
            <ul className='list'>
             {admin && <div className='back'>
-                <li >
+                <li ><br />
+
               <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3"> 
-                <Link to={`${url}/addcourse`} className="nav-link text-black">Add Course </Link>
+                <Link to={`${url}/addcourse`} className="nav-link text-black text-nowrap text-center">Add Course </Link>
              </button> <br />
           
               <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3"> 
-                <Link to={`${url}/makeAdmin`} className="nav-link text-black"> Make Admin</Link> 
+                <Link to={`${url}/makeAdmin`} className="nav-link text-black text-nowrap text-center"> Make Admin</Link> 
                </button><br />
          < button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
-                <Link to={`${url}/addteacher`} className="nav-link text-black">Add Teacher</Link> 
+           <Link to={`${url}/addteacher`} className="nav-link text-black text-nowrap text-center">Add Teacher</Link> 
          </button><br />
 
           <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
@@ -62,6 +65,7 @@ const Dashboard = () => {
                                     </li>
             </div> }
                 </ul>
+                </div>
             
 
              
@@ -99,7 +103,8 @@ const Dashboard = () => {
 
                </div>
                </div>
-               </>
+               </div>
+               
                
 
         

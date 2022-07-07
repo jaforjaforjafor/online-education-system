@@ -30,13 +30,15 @@ const ManageCourses = () => {
 
     return (
         <div style={{ background: `linear-gradient(to right, #606c88, #3f4c6b)` }}>
-            <div>
-                <table className="table table-borderless text-white"  >
+           
+            <div className="container mb-4 ">
+                <table className="table table-borderless text-white "  >
                     <thead>
-                        <tr className='border'>
-                            <th scope="col">Name</th>
+                        <tr className='border '>
+                            <th  scope="col">Courses</th>
                             <th scope="col">Price</th>
                             <th scope="col">Action</th>
+                            
                         </tr>
                     </thead>
 
@@ -46,12 +48,13 @@ const ManageCourses = () => {
 
                             <tbody key={pd._id}>
                                 <tr>
-                                    <td>{pd?.name}</td>
+                                    <td>{pd?.courses}</td>
                                     <td>{pd?.price}</td>
 
                                     <td>
 
-                                        <button onClick={() => handleRemove(pd._id)} className="btn"><i className="fas fa-trash text-danger"></i></button>
+                                        <button onClick={() => handleRemove(pd._id)} className="btn btn-danger btn-sm text-white fs-8"><i className="fas fa-trash text-info"></i> Delete</button>
+                                        
 
                                     </td>
 
@@ -68,6 +71,7 @@ const ManageCourses = () => {
 
                 </table>
 
+            
             </div>
 
         </div>

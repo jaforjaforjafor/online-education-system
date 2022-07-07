@@ -1,13 +1,17 @@
+.sidebar1 {
+    background: #212529;
+    padding: 0px;
+    height: auto;
+   
+}
 .list {
     color: #fff;
     list-style: none;
-    padding-left: 0px;
-};
-.list::first-line {
-    color: rgba(255, 255, 255, 0.973);
+    margin-left: 40px;
 }
-.back{
-    background-color: aqua;
+
+.list::first-line {
+    color: rgba(56, 3, 63, 0.973);
 }
 .color-down{
     background-color: black;

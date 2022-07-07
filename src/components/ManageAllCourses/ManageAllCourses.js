@@ -28,15 +28,16 @@ const ManageAllCourses = () => {
 
     return (
         <div style={{ background: `linear-gradient(to right, #606c88, #3f4c6b)` }}>
-            <div className="container mb-4 ">
-                <div>
-                    <table className="table table-borderless text-white"  >
+            
+                <div className="container mb-4 ">
+                    
+                    <table className="table table-borderless text-white ms-4 me-2"  >
                         <thead>
                             <tr className='border'>
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Address</th>
-                                <th scope="col">Action</th>
+                                <th   scope="col">Action</th>
                             </tr>
                         </thead>
 
@@ -69,7 +70,7 @@ const ManageAllCourses = () => {
                 </div>
 
             </div>
-        </div>
+        
     );
 };
 
