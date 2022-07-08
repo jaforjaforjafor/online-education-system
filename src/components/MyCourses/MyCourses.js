@@ -7,14 +7,14 @@ const MyCourses = () => {
     const { user } = useAuth();
     const [myCourses, setMyCourses] = useState([])
     useEffect(() => {
-        const url = `http://localhost:5000/purchase?email=${user.email}`
+        const url = `https://pure-oasis-80814.herokuapp.com/purchase?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setMyCourses(data));
     }, [user.email])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/purchase/${id}`;
+        const url = `https://pure-oasis-80814.herokuapp.com/purchase/${id}`;
         const isReady = window.confirm('are you sure you want to delete this order?');
         if (isReady) {
             fetch(url, {

@@ -14,7 +14,7 @@ const PlaceOrder = () => {
 
         const isReady = window.confirm('are you sure to add this order?');
         if (isReady) {
-            fetch("http://localhost:5000/purchase", {
+            fetch("https://pure-oasis-80814.herokuapp.com/purchase", {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

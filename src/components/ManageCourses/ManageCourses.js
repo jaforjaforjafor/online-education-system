@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 const ManageCourses = () => {
     const [manageCourses, setManageCourses] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/manageCourses`)
+        fetch(`https://pure-oasis-80814.herokuapp.com/manageCourses`)
             .then(res => res.json())
             .then(data => setManageCourses(data))
     }, [])
 
     const handleRemove = id => {
-        const url = `http://localhost:5000/manageCourses/${id}`;
+        const url = `https://pure-oasis-80814.herokuapp.com/manageCourses/${id}`;
         const isReady = window.confirm('are you sure you want to delete this order?');
         if (isReady) {
             fetch(url, {

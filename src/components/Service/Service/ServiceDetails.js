@@ -7,7 +7,7 @@ const ServiceDetails = () => {
     const {id}=useParams();
     const[serviceDetails,setServiceDetails]=useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/teachers")
+        fetch("https://pure-oasis-80814.herokuapp.com/teachers")
             .then(res => res.json())
             .then((data) => {
                 const foundService= data.filter(detail => detail._id == id)

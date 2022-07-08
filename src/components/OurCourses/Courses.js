@@ -5,7 +5,7 @@ import Course from '../Course/Course';
 const Courses = () => {
   const [courses,setCourses]=useState([]);
   useEffect( ()=>{
-    fetch('http://localhost:5000/courses')
+    fetch('https://pure-oasis-80814.herokuapp.com/courses')
     .then(res=>res.json())
     .then(data=> setCourses(data))
 

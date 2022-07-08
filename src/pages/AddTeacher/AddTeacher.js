@@ -6,7 +6,7 @@ import  './AddTeacher.css';
 const AddTeacher = () => {
     const { register, handleSubmit,reset } = useForm();
   const onSubmit = data =>{ console.log(data);
-  axios.post('http://localhost:5000/teachers',data)
+  axios.post('https://pure-oasis-80814.herokuapp.com/teachers',data)
   .then(res=>{
       if(res.data.insertedId){
           alert ('added successfully');

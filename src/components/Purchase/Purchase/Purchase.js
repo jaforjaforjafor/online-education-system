@@ -8,7 +8,7 @@ const Purchase = () => {
     const[purchase,setPurchase]=useState([]);
     
     useEffect(() => {
-        fetch("http://localhost:5000/courses")
+        fetch("https://pure-oasis-80814.herokuapp.com/courses")
             .then(res => res.json())
             .then((data) => {
                 const foundPurchase= data.filter(detail => detail._id == id)

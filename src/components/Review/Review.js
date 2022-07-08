@@ -11,7 +11,7 @@ const Review = () => {
     const onSubmit = data => {
         console.log(data)
 
-        axios.post('http://localhost:5000/ratings', data)
+        axios.post('https://pure-oasis-80814.herokuapp.com/ratings', data)
         
             .then(res => {
 

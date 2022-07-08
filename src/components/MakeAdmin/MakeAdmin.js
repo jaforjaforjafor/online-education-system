@@ -13,7 +13,7 @@ const MakeAdmin = () => {
         const user = { email };
 
 
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://pure-oasis-80814.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 

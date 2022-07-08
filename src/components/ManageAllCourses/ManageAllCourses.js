@@ -4,14 +4,14 @@ const ManageAllCourses = () => {
     const [status, setStatus] = useState([])
     const [manageCourses, setManageCourses] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/manageAllOrders')
+        fetch('https://pure-oasis-80814.herokuapp.com/manageAllOrders')
             .then(res => res.json())
             .then(data => setManageCourses(data))
     }, [])
     const handleStatus = (_id, pd) => {
         pd.status = "Enrolled";
 
-        fetch(`http://localhost:5000/manageAllOrders/${_id}`, {
+        fetch(`https://pure-oasis-80814.herokuapp.com/manageAllOrders/${_id}`, {
             method: 'PUT',
             headers:
                 { "content-type": "application/json" },

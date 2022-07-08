@@ -5,7 +5,7 @@ import './Teachers.css';
 const Teachers = () => {
   const [teachers,setTeachers]=useState([]);
   useEffect( ()=>{
-    fetch('http://localhost:5000/teachers')
+    fetch('https://pure-oasis-80814.herokuapp.com/teachers')
     .then(res=>res.json())
     .then(data=> setTeachers(data))
 
