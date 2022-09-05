@@ -17,11 +17,11 @@ const Purchase = () => {
     }, [])
     const { courses, description, img, price } = purchase[0] || {}
     return (
-        <div className="container mt-4   ">
+        <div className="container-fluid ">
         <div className="row ">
-            <div className="w-100 col-md-4">
-                <div className="card h-100 shadow-lg">
-                    <img src={img} className="card-img-top w-50 img-fluid " alt="..."  />
+            <div className="col-md-6">
+                <div className="card h-50 w-100  shadow-lg">
+                    <img src={img} className="card-img-top" alt="..."  />
                     <div className="card-body">
 
                         <p className="text-nowrap"><strong >Service:{courses}</strong></p>
@@ -32,11 +32,12 @@ const Purchase = () => {
 
                 </div>
             </div>
-            
-        </div>
-        <div className="col-md-8">
+            <div className="col-md-8">
                 <PlaceOrder></PlaceOrder>
             </div>
+            
+        </div>
+        
 
     </div>
 

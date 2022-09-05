@@ -30,7 +30,15 @@ const Login = () => {
     }
     
     const handleGoogleLogin=()=>{
-        signInUsingGoogle(location,history)
+        signInUsingGoogle(location,history);
+        if(error){
+            setError(error.message);
+            return;
+          }
+          else{
+            setError('');
+            
+          }
         
        
        

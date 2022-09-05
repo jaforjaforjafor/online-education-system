@@ -11,6 +11,7 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
 import Courses from "./components/OurCourses/Courses";
+import OurTeam from "./components/OurTeamMembers/OurTeam";
 import Payment from "./components/Payment/Payment";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Purchase from "./components/Purchase/Purchase/Purchase";
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path="/teacher's profile">
             <Teachers></Teachers>
+          </Route>
+          <Route path="/ourteam">
+            <OurTeam></OurTeam>
           </Route>
           <PrivateRoute path="/payment">
             <Payment></Payment>

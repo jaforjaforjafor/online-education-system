@@ -11,7 +11,7 @@ const Register = () => {
     
 
     const history = useHistory();
-    const { user, registerUser, isLoading,signInUsingGoogle, authError } = useAuth();
+    const { user, registerUser, isLoading, authError } = useAuth();
 
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -25,26 +25,24 @@ const Register = () => {
         if (loginData.password !== loginData.password2) {
             alert('Your password did not match');
             
-            return;
+            return
         }
         if(loginData.password.length <6){
             alert('password must be at least 6 characters long');
-            return;
+            return
             
         }
         if(!/(?:[^A-Z]*[A-Z])/.test(loginData.password)){
             alert('password must contain 2 upper case');
-            return;
+            return
             
         }
         
         
         
-        registerUser(loginData.email, loginData.password, loginData.name,loginData.location,history);
+        registerUser(loginData.email, loginData.password, loginData.name,history);
         e.preventDefault();
     }
-    const handleGoogleLogin=()=>{
-        signInUsingGoogle(loginData.location,history)}
     return (
         <>
         <h3 className="mt-5 text-center text-info fw-bolder " style={{ background: `linear-gradient(to right, #f18973, #182848)` }}>Register Form</h3>
@@ -96,14 +94,7 @@ const Register = () => {
 
 
                     <p className="text-white fw-bolder">Already have a account? Please <Link className="text-decoration-none text-info" to="/login">login</Link></p>
-                    <div>----------Or---------</div>
-                    <button 
-                         onClick={handleGoogleLogin}
-                         className='btn-regular reg-google'
-                         >Google Sign In</button>
-                        <br />
-
-
+                    
                 </form>}
                 <br />
                 

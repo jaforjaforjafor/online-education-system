@@ -5,6 +5,7 @@ import Medium from '../Medium/Medium';
 import Teachers from '../Teacher-Profile/Teachers';
 import Contact from '../Contact/Contact';
 import Courses from '../OurCourses/Courses';
+import OurTeam from '../OurTeamMembers/OurTeam';
 
 
 
@@ -16,6 +17,7 @@ const Home = () => {
            <Medium></Medium> 
           <Teachers></Teachers>
           <Courses></Courses>
+          <OurTeam></OurTeam>
           <Contact></Contact>
     </div>
    

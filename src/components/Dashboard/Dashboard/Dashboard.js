@@ -11,6 +11,9 @@ import DashboardHome from '../../DashboardHome/DashboardHome';
 import MakeAdmin from '../../MakeAdmin/MakeAdmin';
 import AdminRoute from '../../AdminRoute/AdminRoute';
  import ManageCourses from '../../ManageCourses/ManageCourses';
+import ManageTeachers from '../../ManageTeachers.js/ManageTeachers';
+import Payment from './Payment/Payment'
+
 
 
 
@@ -19,8 +22,8 @@ const Dashboard = () => {
      const { admin } = useAuth();
     return (
         
-          <div style={{ background: `linear-gradient(to right, #ffd194,#70e1f5) ` }}>
-            <div className="row">
+          <div>
+            <div className="row"  style={{ background: `linear-gradient(to right, #ffd194,#70e1f5) ` }}>
                 <div className="col-md-2 col-sm-4 sidebar1">
           
               
@@ -30,7 +33,7 @@ const Dashboard = () => {
                                  <li>
                                      <h2 >DashBoard</h2>
                                      <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
-             <Link to={`${url}/purchase`} className="nav-link text-black fs-4">my Purchase</Link> </button> <br />
+             <Link to={`${url}/purchase`} className="nav-link text-black fs-4">My Purchase</Link> </button> <br />
             <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
              <Link to={`${url}/review`} className="nav-link text-black">Review</Link> </button> <br />
 
@@ -62,6 +65,9 @@ const Dashboard = () => {
           <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
                 <Link to={`${url}/manageCourses`} className="nav-link text-black text-nowrap ">Manage Courses</Link>
           </button><br /><br />
+          <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
+                <Link to={`${url}/manageTeachers`} className="nav-link text-black text-nowrap ">Manage Teachers</Link>
+          </button><br /><br />
                                     </li>
             </div> }
                 </ul>
@@ -78,6 +84,9 @@ const Dashboard = () => {
           </Route>
         <Route path={`${path}/purchase`}>
                  <MyCourses></MyCourses>
+             </Route> 
+        <Route path={`${path}/payment/:purchaseId`}>
+                 <Payment></Payment>
              </Route> 
              <Route path={`${path}/review`}>
                  <Review></Review>
@@ -98,6 +107,9 @@ const Dashboard = () => {
                </AdminRoute>
                <AdminRoute path={`${path}/manageCourses`}>
                     <ManageCourses></ManageCourses>
+                </AdminRoute>
+               <AdminRoute path={`${path}/manageTeachers`}>
+                    <ManageTeachers></ManageTeachers>
                 </AdminRoute>
                </Switch>
 

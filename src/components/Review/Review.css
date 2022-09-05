@@ -1,7 +1,10 @@
 .icon-color{
     color: gold;
-}
+};
 
 .re{
     height: 100vh;
+};
+.login-form{
+    background-color: chocolate;
 }

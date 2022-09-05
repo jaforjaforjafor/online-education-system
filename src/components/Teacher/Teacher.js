@@ -10,7 +10,7 @@ const Teacher = (props) => {
         <div className="card h-100   shadow-lg" >
             <img src={img} className="card-img-top" width="450" height="150" alt="..." />
             <div className="card-body h-100 w-400">
-                <h2>{teachers}</h2>
+                <h2>Name:{teachers}</h2>
                 <h5 className="card-title">Email:{email}</h5>
                 <p className="card-text"> <strong>Designation:</strong> {designation}</p>
                 <p className="text-nowrap"><strong >expert:</strong>{expert}</p>

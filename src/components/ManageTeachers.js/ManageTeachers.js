@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
-const ManageCourses = () => {
-    const [manageCourses, setManageCourses] = useState([])
+const ManageTeachers = () => {
+    const [manageTeachers, setManageTeachers] = useState([])
     useEffect(() => {
-        fetch(`https://pure-oasis-80814.herokuapp.com/manageCourses`)
+        fetch(`https://pure-oasis-80814.herokuapp.com/manageTeachers`)
             .then(res => res.json())
-            .then(data => setManageCourses(data))
+            .then(data => setManageTeachers(data))
     }, [])
 
     const handleRemove = id => {
-        const url = `https://pure-oasis-80814.herokuapp.com/manageCourses/${id}`;
-        const isReady = window.confirm('are you sure you want to delete this course?');
+        const url = `https://pure-oasis-80814.herokuapp.com/manageTeachers/${id}`;
+        const isReady = window.confirm('are you sure you want to delete this Teacher?');
         if (isReady) {
             fetch(url, {
                 method: 'DELETE'
@@ -19,9 +19,9 @@ const ManageCourses = () => {
                 .then(data => {
                     console.log(data)
                     if (data.deletedCount) {
-                        alert('course is deleted succssfully')
-                        const remaining = manageCourses.filter(order => order._id !== id);
-                        setManageCourses(remaining);
+                        alert('Teacher is  deleted succssfully')
+                        const remaining = manageTeachers.filter(order => order._id !== id);
+                        setManageTeachers(remaining);
 
                     }
                 })
@@ -29,14 +29,14 @@ const ManageCourses = () => {
     }
 
     return (
-        <div style={{ background: `linear-gradient(to right, #3f4c6b,#606c88 )` }}>
+        <div style={{ background: `linear-gradient(to right, #606c88, #3f4c6b)` }}>
            
-            <div className="container mb-4 ">
+            <div className="container-fluid mb-4 ">
                 <table className="table table-borderless text-white "  >
                     <thead>
                         <tr className='border '>
-                            <th  scope="col">Courses</th>
-                            <th scope="col">Price</th>
+                            <th  scope="col">Name</th>
+                            <th scope="col">Email</th>
                             <th scope="col">Action</th>
                             
                         </tr>
@@ -44,12 +44,12 @@ const ManageCourses = () => {
 
 
                     {
-                        manageCourses?.map((pd) =>
+                        manageTeachers?.map((pd) =>
 
                             <tbody key={pd._id}>
                                 <tr>
-                                    <td>{pd?.courses}</td>
-                                    <td>{pd?.price}</td>
+                                    <td>{pd?.email}</td>
+                                    <td>{pd?.expert}</td>
 
                                     <td>
 
@@ -78,4 +78,4 @@ const ManageCourses = () => {
     );
 };
 
-export default ManageCourses;
+export default ManageTeachers;
