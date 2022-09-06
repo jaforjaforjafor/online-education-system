@@ -12,7 +12,7 @@ const Payment = () => {
     const {purchaseId}=useParams();
     const [payment,setPayment]=useState({});
     useEffect(()=>{
-        fetch(`http://localhost:5000/purchase/${purchaseId}`)
+        fetch(`https://pure-oasis-80814.herokuapp.com/purchase/${purchaseId}`)
         .then(res=>res.json())
         .then(data=>setPayment(data))
     },[purchaseId])

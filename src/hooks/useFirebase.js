@@ -72,7 +72,7 @@ const useFirebase = () => {
     }, [auth])
     // admin useEffect
     useEffect(() => {
-        fetch(`https://glacial-temple-59647.herokuapp.com/users/${user.email}`)
+        fetch(`https://pure-oasis-80814.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin));
     }, [user.email])
