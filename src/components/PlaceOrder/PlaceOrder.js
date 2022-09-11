@@ -35,11 +35,11 @@ const PlaceOrder = () => {
     return (
         
 
-        <div>
-            <div className="container pt-5">
-                <div className="row  justify-content-sm-center pt-5">
+        <>
+            <div className="container ">
+                <div className="row  justify-content-sm-center ">
                     <div className="col-sm-12 shadow round pb-3">
-                        <h1 className="text-center pt-3 text-secondary">Course Order Form</h1>
+                        <h1 className=" text-secondary">Course Order Form</h1>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-group">
                                 <label className="col-form-label"></label>
@@ -146,7 +146,7 @@ const PlaceOrder = () => {
                 </div>
             </div>
 
-        </div>
+        </>
 
 
 

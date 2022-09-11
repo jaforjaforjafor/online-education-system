@@ -17,10 +17,10 @@ const Purchase = () => {
     }, [])
     const { courses, description, img, price } = purchase[0] || {}
     return (
-        <div className="container-fluid ">
+        <div className="container-fluid  d-flex ms-5">
         <div className="row ">
-            <div className="col-md-6">
-                <div className="card h-50 w-100  shadow-lg">
+            <div className="col-md-6 ">
+                <div className="card h-70 w-100  shadow-lg">
                     <img src={img} className="card-img-top" alt="..."  />
                     <div className="card-body">
 
@@ -28,17 +28,19 @@ const Purchase = () => {
                         <p className="card-text"> <strong>Description:</strong> {description}</p>
 
                         <p className="text-nowrap"><strong >Price:</strong>{price}</p>
+                     
                     </div>
-
+                  
                 </div>
+                
             </div>
-            <div className="col-md-8">
+            <div className="col-md-2 ">
                 <PlaceOrder></PlaceOrder>
             </div>
             
         </div>
         
-
+       
     </div>
 
         // <div>

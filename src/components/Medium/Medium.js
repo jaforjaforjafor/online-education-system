@@ -9,20 +9,21 @@ const Medium = () => {
     return (
         <div >
             
-        <div className='home-colour'>
+        <div className='home-colour text-center '>
           <h2> <span className='welcome'> Online Education System </span> </h2> 
-           <p className='we'>We provide online-education, nowadays it is one of the best  education system,people like to admit this system,if you are interested please enroll.</p> 
+           <p className='we fs-4'>We provide online-education, nowadays it is one of the best  education system.</p> 
          </div><br /><br /><br />
         <div className='margin'>
         <div className="d-flex">
             <div className="mx-5">
-            <h1 className="text-success">We Care About Education </h1>
-        <p className="text-dark">There is a proverb that "Education is the passport to the future, for tomorrow belongs to those who prepare for it today". So if you need any kind of advice please tell us,we have ourexperienced teacher's now in online. </p> 
+            <h1 className="text-success ">We Care About Education </h1>
+        <p className="text-dark fs-4">There is a proverb that "Education is the passport to the future, for tomorrow belongs to those who prepare for it today". So if you need any kind of advice please tell us,we have ourexperienced teacher's now in online. </p> 
             </div>
-            <img  className='choto' src={logo} alt=""height="350px" />
+            <img  className='choto' src={logo} alt=""height="300px" />
             
            
-        </div>
+        </div><br /><br />
+        <br /><br />
        
         <h1 className='features'>Our Features</h1>
         <div className="container">
@@ -32,24 +33,22 @@ const Medium = () => {
 <img className="card-img-top" src={pogo} alt=""  height="250px"/>
 <div className="card-body">
 <h5 className="card-title">Student dependencies</h5>
-<p className="card-text">Advice teacher's how to gain knowledge.feel freshness  if your education is well</p>
-
-
+<p className="card-text">Advice teacher's how to gain knowledge. Feel freshness if your education is well.</p>
 </div>
 </div> </div>
 <div className="col-sm"> <div className="card">
 <img className="card-img-top" src={nogo} alt="" height="250px"/>
 <div className="card-body">
-<h5 className="card-title">Online CLass  time</h5>
-<p className="card-text">Student  think about Education,we think about student.</p>
+<h5 className="card-title">Online class  time</h5>
+<p className="card-text">Student  think about education, we think about student.</p>
 
 </div>
 </div> </div>
 <div className="col-sm"> <div className="card">
 <img className="card-img-top" src={ogo} alt=""  height="250px"/>
 <div className="card-body">
-<h5 className="card-title">Successful Exam</h5>
-<p className="card-text"> after Successful  online  exam the student feels like he is happy .</p>
+<h5 className="card-title">Successful exam</h5>
+<p className="card-text"> After successful  online  exam the student feels like he is happy .</p>
 
 </div>
 </div></div>

@@ -18,10 +18,13 @@ const ServiceDetails = () => {
     
 
     return (
-        <div>
-            <div className="container mt-4  ">
+        <>
+        <div className='d-flex'> 
+            <div className="container mt-4 ">
+                
             <div className="row justify-content-center align-items-center ">
                 <div className="w-100">
+                
                     <div className="card h-100 shadow-lg">
                         <img src={img} className="card-img-top " alt="..." />
                         <div className="card-body">
@@ -38,12 +41,22 @@ const ServiceDetails = () => {
                         </div>
 
                     </div>
+                    
+                    
                 </div>
+                
             </div>
+            
 
+        </div>
+        <div >
+        <button className="btn btn-light fs-4  "><Link to="/home"  >Go to Home</Link></button>
         </div>
 
         </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+       
+        </>
     );
 };
 

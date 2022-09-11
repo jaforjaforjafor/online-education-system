@@ -117,5 +117,5 @@ const Register = () => {
         </>
     );
 };
-//register 7min ;
+//done register 7min ;
 export default Register;

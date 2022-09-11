@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import useAuth from '../../hooks/useAuth';
-import admin from '../Images/picture-admin.jpg'
 import './MakeAdmin.css';
 
 const MakeAdmin = () => {
@@ -47,7 +46,7 @@ const MakeAdmin = () => {
             <form onSubmit={handleAdminSubmit}>
                 <input
                     className='border border-light'
-                    sx={{ width: '70%' }}
+                    sx={{ width: '100%' }}
                     label="Email"
                     type="email"
                     placeholder="Email"
@@ -63,9 +62,7 @@ const MakeAdmin = () => {
 
            
         </div><br />
-        <div className=' text-center admin-pic'>
-             <img   src={admin} alt="" />
-        </div>
+       
         </>
     );
 };

@@ -1,4 +1,4 @@
-import { getAuth, } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
@@ -11,7 +11,7 @@ const Login = () => {
     const [loginData,setLoginData]=useState({});
     const [error,setError]=useState({});
     const auth = getAuth();
-    const { user, loginUser, isLoading, signInUsingGoogle, authError } = useAuth();
+    const { user, loginUser, isLoading, signInWithGoogle, authError } = useAuth();
     
     
    
@@ -23,22 +23,15 @@ const Login = () => {
         const newLoginData = { ...loginData };
         newLoginData[field] = value;
         setLoginData(newLoginData);
-    }
+    };
     const handleLoginSubmit = e => {
          loginUser(loginData.email, loginData.password, location, history);
         e.preventDefault();
-    }
+    };
     
     const handleGoogleLogin=()=>{
-        signInUsingGoogle(location,history);
-        if(error){
-            setError(error.message);
-            return;
-          }
-          else{
-            setError('');
-            
-          }
+        signInWithGoogle(location,history);
+        
         
        
        
@@ -58,6 +51,8 @@ const Login = () => {
   
   
   
+    };
+    const handleResetPassword=()=>{
     }
     return (
         <div className="container mt-4 bg-dark w-50" style={{ background: `linear-gradient(to right, #e6dada, #274046)` }}>
@@ -75,8 +70,8 @@ const Login = () => {
                 <input  type="email" name="email" onChange={handleOnChange} id="" placeholder='Enter Your Email ' /><br /><br />
                 <input type="password" name="password" onChange={handleOnChange} id="" placeholder='Enter Your password ' />
                 <br /><br />
-                <input  className="submit-login" type="submit" value="submit" />
-                <br /><br />
+                <input  className="submit-login" type="submit" value="submit" /><br /><br />
+                <button type='button' onClick={handleResetPassword} className='btn btn-secondary btn-sm '>Reset Password</button>
                 {user?.email && <div className="alert alert-success" role="alert">
                     
                 user  is login </div>}
@@ -91,6 +86,7 @@ const Login = () => {
             className='btn-regular'
             >Google Sign In</button>
             <br /><br />
+          
             </div>
             <br /><br />
            
