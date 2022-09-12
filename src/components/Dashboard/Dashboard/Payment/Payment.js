@@ -20,13 +20,14 @@ const Payment = () => {
         <div>
             <h2 className='payment-color text-center'>Payment:{purchaseId}</h2><br /><br />
             
-            <h4 className='text-primary'>Pay: $</h4>
+            <h4 className='text-primary'>Pay: </h4>
             <Elements stripe={stripePromise}>
       <CheckoutForm
               payment={Payment}
       />
       
     </Elements>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             
             
         </div>

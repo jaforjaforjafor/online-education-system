@@ -16,11 +16,14 @@
    
 }
 .opening-hour{
-    color: coral;
+    color: rgb(17, 16, 16);
     font-family: 'Poppins', sans-serif;
 }
 .sun-close{
     display: inline;
     background-color: red;
     color: rgb(238, 255, 0);
+};
+.claim{
+    background-color: black;
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { CardElement, useStripe,useElements } from '@stripe/react-stripe-js';
 import { useState } from 'react';
+import   './CheckoutForm.css';
+import { useEffect } from 'react';
 
 
 
@@ -8,6 +10,24 @@ const CheckoutForm = ({payment}) => {
     const stripe=useStripe();
     const elements=useElements();
     const [error,setError]=useState('');
+    const [clientSecret,setClientSecret]=useState('');
+    const {price}=payment;
+    useEffect( ()=>{
+        fetch('http://localhost:5000/create-payment-intent',{
+          method:'POST',
+          header:{
+            'content-type':'application/json',
+          },
+          body:JSON.stringify({price})
+        })
+        .then(res =>res.json())
+        .then(data=>{
+          if(data?.clientSecret){
+            setClientSecret(data.clientSecret);
+          }
+        });
+
+     },[price])
     const handleSubmit=async  (e) =>{
             e.preventDefault();
         if (!stripe || !elements) {
@@ -49,9 +69,16 @@ const CheckoutForm = ({payment}) => {
           },
         }}
       />
-      <button type="submit" disabled={!stripe}>
-        Pay
-      </button>
+      <div className='col text-center '>
+      <button style={{
+        
+        color:"blue",
+        borderRadius:"10px ",
+        padding:"5px",
+        fontSize:"30px"
+      }} type="submit" disabled={!stripe || !clientSecret}> Pay </button>
+
+      </div>
     </form>
     {error && <p style={{color:'red'}}>{error}</p>
     }

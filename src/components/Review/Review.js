@@ -56,7 +56,7 @@ const Review = () => {
                             <br />
 
 
-                            <input type="number" {...register("number", { required: true })} placeholder="rating"
+                            <input type="number" min="1" max="5" {...register("number", { required: true })} placeholder="rating"
                                 defaultValue={user.number}
                                 className="p-2 m-2 w-50"
                             />

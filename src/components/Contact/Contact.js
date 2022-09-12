@@ -22,7 +22,6 @@ const Contact = () => {
 <h4>fri 09.00am - 05.30pm</h4><br />
 <h4>Sat 09.00am - 02.30pm</h4><br />
 <h4 className='sun-close'>Sun closed</h4><br /><br />
-<h6 className='text-dark'>Calling about a claim? We're here 24/7, all year round on:01911131006 Social: You can catch us on Twitter or Facebook, or find your favourite platform on our social homepage.</h6>
 <a>www.facebook.com/jaforiqbal</a><br /><br />
 <h4>Email us: <a className="email" href="">jafor365iqbal@gmail.com</a> OR <a className="email" href="">lionelsharmi10@gmail.com</a></h4>
  
@@ -33,6 +32,7 @@ const Contact = () => {
 .</h5>
 
 </div>
+
 
 
 

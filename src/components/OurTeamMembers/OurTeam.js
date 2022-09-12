@@ -4,17 +4,29 @@ import member1 from "../Images/payment-2.jpg";
 
 const OurTeam = () => {
     return (
-        <div>
-            <h2 className='text-center'>our team</h2>
-        <div class="container justify-content align-items-center">
+        <div >
+            <h1 className='text-center text-info m-5' >Our Team</h1>
+        <div class="container justify-content align-items-center ">
             
-  <div class="row row-cols-2">
-    <div class="col">
-        <h2>name:Jafor iqbal</h2>
+  <div class="row row-cols-2  mx-5">
+    <div class="col" style={{
+        background:"blue",
+        color:'white',
+        alignItems:'center',
+        justifyContent:"center"
+    }}>
+        <span className='fs-4'>Name:Jafor Iqbal</span>
         <img src={member} alt="" />
     </div>
-    <div class="col">
-        <h2>name:Sharmi Mondal</h2>
+    <div class="col" style={{
+        background:"blue",
+        color:'white',
+        alignItems:'center',
+        justifyContent:'center',
+
+    }}>
+    <span className='fs-4'>Name:Sharmi Mondal</span>
+
         <img src={member1} alt="" />
     </div>
     

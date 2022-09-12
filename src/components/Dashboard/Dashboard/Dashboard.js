@@ -13,6 +13,7 @@ import AdminRoute from '../../AdminRoute/AdminRoute';
  import ManageCourses from '../../ManageCourses/ManageCourses';
 import ManageTeachers from '../../ManageTeachers.js/ManageTeachers';
 import Payment from './Payment/Payment'
+import ManageAdmin from '../../ManageAdmin/ManageAdmin';
 
 
 
@@ -64,10 +65,13 @@ const Dashboard = () => {
 
           <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
                 <Link to={`${url}/manageCourses`} className="nav-link text-black text-nowrap ">Manage Courses</Link>
-          </button><br /><br />
+          </button><br />
           <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
                 <Link to={`${url}/manageTeachers`} className="nav-link text-black text-nowrap ">Manage Teachers</Link>
-          </button><br /><br />
+          </button><br />
+          <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
+                <Link to={`${url}/manageAdmin`} className="nav-link text-black text-nowrap ">Manage Admin</Link>
+          </button><br /><br ></br>
                                     </li>
             </div> }
                 </ul>
@@ -94,6 +98,9 @@ const Dashboard = () => {
           
           <AdminRoute path={`${path}/manageAllOrders`}>
                      <ManageAllCourses></ManageAllCourses>
+                 </AdminRoute>
+          <AdminRoute path={`${path}/manageAdmin`}>
+                     <ManageAdmin></ManageAdmin>
                  </AdminRoute>
           <AdminRoute exact path={`${path}/makeAdmin`}>
         <MakeAdmin></MakeAdmin>

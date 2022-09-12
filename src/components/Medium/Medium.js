@@ -40,7 +40,7 @@ const Medium = () => {
 <img className="card-img-top" src={nogo} alt="" height="250px"/>
 <div className="card-body">
 <h5 className="card-title">Online class  time</h5>
-<p className="card-text">Student  think about education, we think about student.</p>
+<p className="card-text">Student  think about education, we think about student,and successful result ratio </p>
 
 </div>
 </div> </div>

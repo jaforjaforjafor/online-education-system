@@ -1,9 +1,10 @@
 .copy{
-    color: rgb(255, 85, 7);
+    color: rgb(7, 97, 150);
+    font-style: inherit;
 }
 .limited{
-    background-color: black;
-    color: aqua;
+    background-color: rgb(240, 234, 234);
+    color: rgb(69, 10, 233);
 }
 .address{
     color: blueviolet;
