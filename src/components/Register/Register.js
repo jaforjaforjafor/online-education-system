@@ -9,9 +9,10 @@ const Register = () => {
     
     
     
+    
 
     const history = useHistory();
-    const { user, registerUser, isLoading, authError } = useAuth();
+    const { user, registerUser, isLoading, authError ,error} = useAuth();
 
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -28,11 +29,11 @@ const Register = () => {
         //     return
         // }
         
-        if (loginData.password !== loginData.password2) {
-            alert('Your password did not match');
-            
+        if(loginData.password !== loginData.password2){
+            alert('password did not match');
             return
         }
+        
         if(loginData.password.length <6){
             alert('password must be at least 6 characters long');
             return
@@ -64,6 +65,8 @@ const Register = () => {
                         placeholder="Your Name"
                         onBlur={handleOnBlur}
                         required
+                        
+                        
                     />
                     <br />
                     <input
@@ -74,7 +77,7 @@ const Register = () => {
                         placeholder="Your Email"
                         onBlur={handleOnBlur}
                         required
-
+                   
                         />
                     <br />
                     <input className="mt-4"
@@ -83,7 +86,9 @@ const Register = () => {
                         type="password"
                         name="password"
                         placeholder="Your Password"
-                        onBlur={handleOnBlur} />
+                        onBlur={handleOnBlur} 
+                        required
+                        />
                           
                                         
                     <br />
@@ -94,9 +99,15 @@ const Register = () => {
                         type="password"
                         name="password2"
                         placeholder="Re-type Password"
-                        onBlur={handleOnBlur} />
+                        onBlur={handleOnBlur}
+                        required
+                        />
+                        
+                        
                     <br />
+                    
                     <button className="btn btn-info mt-2 mb-2" type="submit">Register</button>
+                    
 
 
                     <p className="text-white fw-bolder">Already have a account? Please <Link className="text-decoration-none text-info" to="/login">login</Link></p>
@@ -104,6 +115,14 @@ const Register = () => {
                 </form>}
                 <br />
                 
+                
+                
+                
+                
+                
+            
+                
+            
             {isLoading && <div className="spinner-border text-info" role="status">
                 <span className="visually-hidden">Loading...</span>
             </div>}
@@ -122,6 +141,7 @@ const Register = () => {
        
         </>
     );
-};
+            };
+
 //done register 7min ;
 export default Register;

@@ -36,7 +36,7 @@ const Dashboard = () => {
                                      <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
              <Link to={`${url}/purchase`} className="nav-link text-black fs-4">My Purchase</Link> </button> <br />
             <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
-             <Link to={`${url}/review`} className="nav-link text-black">Review</Link> </button> <br />
+             <Link to={`${url}/review`} className="nav-link text-black">Request</Link> </button> <br />
 
                                  </li>
                              }
@@ -44,7 +44,7 @@ const Dashboard = () => {
 
                   
            <ul className='list'>
-            {admin && <div className='back'>
+            {admin && <div className='back' >
                 <li ><br />
 
               <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3"> 
@@ -69,9 +69,7 @@ const Dashboard = () => {
           <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
                 <Link to={`${url}/manageTeachers`} className="nav-link text-black text-nowrap ">Manage Teachers</Link>
           </button><br />
-          <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3">
-                <Link to={`${url}/manageAdmin`} className="nav-link text-black text-nowrap ">Manage Admin</Link>
-          </button><br /><br ></br>
+          <br /><br ></br>
                                     </li>
             </div> }
                 </ul>

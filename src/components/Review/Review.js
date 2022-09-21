@@ -31,7 +31,7 @@ const Review = () => {
                     <div >
                         <form 
                         onSubmit={handleSubmit(onSubmit)}>
-                            <input 
+                            <input disabled 
                                 {...register("name")}
                                 defaultValue={user.displayName}
                                 placeholder="name"
@@ -45,7 +45,7 @@ const Review = () => {
                                 className="p-2 m-2 w-100" />
                             <br />
 
-                            <input {...register("image", { required: true })}
+                            <input disabled {...register("image", { required: true })}
                                 placeholder="image"
                                 className="p-2 m-2 w-100" />
                             <br />

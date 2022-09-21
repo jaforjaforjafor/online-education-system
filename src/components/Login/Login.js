@@ -1,4 +1,4 @@
-import { getAuth, signInWithEmailAndPassword, } from 'firebase/auth';
+import { getAuth, sendPasswordResetEmail,  } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
@@ -9,7 +9,7 @@ import loginRightPic from '../Images/education pic.jpg';
 
 const Login = () => {
     const [loginData,setLoginData]=useState({});
-    const [error,setError]=useState({});
+    
     const auth = getAuth();
     const { user, loginUser, isLoading, signInWithGoogle, authError } = useAuth();
     
@@ -53,7 +53,11 @@ const Login = () => {
   
     };
     const handleResetPassword=()=>{
-    }
+        sendPasswordResetEmail(auth.email)
+         .then(result=>{
+            console.log(result);
+         })
+    };
     return (
         <div className="container mt-4 bg-dark w-50" style={{ background: `linear-gradient(to right, #e6dada, #274046)` }}>
             {isLoading && <div className="spinner-border text-info text-center" role="status">
@@ -75,9 +79,9 @@ const Login = () => {
                 {user?.email && <div className="alert alert-success" role="alert">
                     
                 user  is login </div>}
-                {authError && <div className="alert alert-danger" role="alert">user already exist
+               
                     {authError}
-                </div>}
+                
             </form>
             <p>New user ? <Link to="/register">create account</Link></p>
             <div>----------Or---------</div>

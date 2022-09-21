@@ -1,7 +1,7 @@
 import React from 'react';
 import './Banner.css';
 import { Carousel } from 'react-bootstrap';
-import pogo from '../Images/pic.jpeg';
+import pogo from '../Images/contact-img.png';
 import nogo from '../Images/j (1).jpg';
 import jogo from '../Images/j (2).jpg';
 
@@ -11,10 +11,11 @@ const Banner = () => {
              
              <Carousel fade>
   <Carousel.Item>
-    <img
+    <img 
       className="banner-item-1"
       src={pogo}
       alt="First slide"
+      width='200px'
       
     />
     <Carousel.Caption>

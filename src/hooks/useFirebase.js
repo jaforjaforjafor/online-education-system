@@ -8,6 +8,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsloading] = useState(true);
     const [authError, setAuthError] = useState('');
+    const [error, setError] = useState('');
     const [admin, setAdmin] = useState(false);
 
     const auth = getAuth();
@@ -18,6 +19,7 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 setAuthError('');
+                setError('');
                 verifyEmail();
                 const newUser = { email, displayName: name }
                 setUser(newUser);
@@ -27,12 +29,14 @@ const useFirebase = () => {
                 }).then(() => {
 
                 }).catch((error) => {
+                    setError(error.message);
 
                 });
                 history.replace('/');
             })
             .catch((error) => {
 
+                setError(error.message);
                 setAuthError(error.message);
                 // ..
             })
@@ -51,17 +55,25 @@ const useFirebase = () => {
         setIsloading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
+                verifyPassword();
                 const destination = location?.state?.from || '/';
                 history.replace(destination);
+                setError('');
                 setAuthError('');
+                
             })
             .catch((error) => {
 
+                setError(error.message);
                 setAuthError(error.message);
             })
+            
             .finally(() => setIsloading(false));
 
-    }
+    };
+    const verifyPassword=()=>{
+        
+    };
 
     useEffect(() => {
         const unSubscribed = onAuthStateChanged(auth, (user) => {
@@ -100,11 +112,12 @@ const useFirebase = () => {
             .then((result) => {
                 const user = result.user;
                 saveUser(user.email, user.displayName, 'PUT')
+                setError('');
                 setAuthError('');
                 const destination = location?.state?.from || '/';
                 history.replace(destination);
             }).catch((error) => {
-
+                setError(error.message);
                 setAuthError(error.message);
             })
             .finally(() => setIsloading(false));
@@ -126,7 +139,10 @@ const useFirebase = () => {
 
     return {
         user,
+        verifyEmail,
+        verifyPassword,
         admin,
+        error,
         authError,
         registerUser,
         isLoading,

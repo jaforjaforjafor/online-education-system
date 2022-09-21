@@ -43,55 +43,42 @@ const PlaceOrder = () => {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-group">
                                 <label className="col-form-label"></label>
-                                <input
+                                <input disabled
                                     type="text"
                                     placeholder='name'
                                     defaultValue={user.displayName}
-                                    className={`form-control ${errors.name && "invalid"}`}
-                                    {...register("name", { required: "Name is Required" })}
-                                    onKeyUp={() => {
-                                        trigger("name");
-                                    }}
+                                    className={`form-control `}
+                                    {...register("name", )}
+                                    
                                 />
-                                {errors.name && (
-                                    <small className="text-danger">{errors.name.message}</small>
-                                )}
+                                
                             </div>
 
                             <div className="form-group">
                                 <label className="col-form-label"></label>
-                                <input
+                                <input disabled
                                     type="text"
                                     placeholder='Email'
                                     defaultValue={user.email}
-                                    className={`form-control ${errors.email && "invalid"}`}
+                                    className={`form-control `}
                                     {...register("email", {
-                                        required: "Email is Required",
-                                        pattern: {
-                                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                            message: "Invalid email address",
-                                        }
+                                        
+                                        
                                     })}
-                                    onKeyUp={() => {
-                                        trigger("email");
-                                    }}
+                                    
                                 />
-                                {errors.email && (
-                                    <small className="text-danger">{errors.email.message}</small>
-                                )}
+                                
                             </div>
 
 
                             <div className="form-group">
                                 <label className="col-form-label"></label>
-                                <input
+                                <input disabled 
                                     placeholder="date"
                                     defaultValue={new Date().toDateString()}
-                                    className={`form-control ${errors.name && "invalid"}`}
-                                    {...register("date", { required: "Name is Required" })}
-                                    onKeyUp={() => {
-                                        trigger("date");
-                                    }}
+                                    className={`form-control `}
+                                    {...register("date", )}
+                                    
                                 />
 
                             </div>
@@ -100,18 +87,14 @@ const PlaceOrder = () => {
 
                             <div className="form-group">
                                 <label className="col-form-label"></label>
-                                <input
+                                <input 
                                     type="text"
                                     placeholder='Address'
-                                    className={`form-control ${errors.name && "invalid"}`}
-                                    {...register("Address", { required: "Address is Required" })}
-                                    onKeyUp={() => {
-                                        trigger("Address");
-                                    }}
+                                    className={`form-control `}
+                                    {...register("Address", )}
+                                    
                                 />
-                                {errors.name && (
-                                    <small className="text-danger">{errors.name.message}</small>
-                                )}
+                                
                             </div>
 
                             <div className="form-group">
@@ -136,10 +119,11 @@ const PlaceOrder = () => {
                                 )}
                             </div>
 
-                            <input
+                            <input 
                                 type="submit"
                                 className="btn btn-info my-3"
                                 value="Order Now"
+                                
                             />
                         </form>
                     </div>

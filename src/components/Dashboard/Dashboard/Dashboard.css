@@ -1,11 +1,11 @@
-.sidebar1 {
+ .sidebar1 {
     background: #212529;
     padding: 0px;
     height: auto;
    
 }
 .list {
-    color: #fff;
+    color: rgb(245, 240, 240);
     list-style: none;
     margin-left: 40px;
 }
@@ -15,4 +15,4 @@
 }
 .color-down{
     background-color: black;
-}
+} 
