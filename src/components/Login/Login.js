@@ -9,8 +9,19 @@ import loginRightPic from '../Images/education pic.jpg';
 
 const Login = () => {
     const [loginData,setLoginData]=useState({});
-    
+    const [email, setEmail] = useState('');
     const auth = getAuth();
+    
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        // Password reset email sent!
+        // .. 
+        })
+      
+    
+    
+    
     const { user, loginUser, isLoading, signInWithGoogle, authError } = useAuth();
     
     
@@ -75,7 +86,7 @@ const Login = () => {
                 <input type="password" name="password" onChange={handleOnChange} id="" placeholder='Enter Your password ' />
                 <br /><br />
                 <input  className="submit-login" type="submit" value="submit" /><br /><br />
-                <button type='button' onClick={handleResetPassword} className='btn btn-secondary btn-sm '>Reset Password</button>
+                <button type='button' onClick={sendPasswordResetEmail} className='btn btn-secondary btn-sm '>Reset Password</button>
                 {user?.email && <div className="alert alert-success" role="alert">
                     
                 user  is login </div>}
