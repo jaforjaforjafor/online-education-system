@@ -76,7 +76,7 @@ const CheckoutForm = ({payment}) => {
         borderRadius:"10px ",
         padding:"5px",
         fontSize:"30px"
-      }} type="submit" disabled={!stripe || !clientSecret}> Pay </button>
+      }} type="submit" disabled={!stripe || !clientSecret}> PAY </button>
 
       </div>
     </form>
