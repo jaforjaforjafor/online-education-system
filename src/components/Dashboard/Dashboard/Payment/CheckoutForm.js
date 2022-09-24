@@ -13,7 +13,7 @@ const CheckoutForm = ({payment}) => {
     const [clientSecret,setClientSecret]=useState('');
     const {price}=payment;
     useEffect( ()=>{
-        fetch('http://localhost:5000/create-payment-intent',{
+        fetch(`https://pure-oasis-80814.herokuapp.com/create-payment-intent`,{
           method:'POST',
           header:{
             'content-type':'application/json',
