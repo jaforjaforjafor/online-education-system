@@ -4,6 +4,7 @@ import PlaceOrder from '../../PlaceOrder/PlaceOrder';
 import './Purchase.css';
 
 const Purchase = () => {
+    
     const {id}=useParams();
     const[purchase,setPurchase]=useState([]);
     
@@ -30,12 +31,16 @@ const Purchase = () => {
                         <p className="text-nowrap"><strong >Price:</strong>{price}</p>
                      
                     </div>
+                    
+
                   
                 </div>
                 
             </div>
             <div className="col-md-2 ">
-                <PlaceOrder></PlaceOrder>
+                <PlaceOrder courses={courses}
+                price={price}
+                image={img}></PlaceOrder>
             </div>
             
         </div>

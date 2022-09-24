@@ -13,10 +13,10 @@ const Payment = () => {
         .then(data=>setPayment(data))
     },[purchaseId])
     return (
-        <div>
+        <div >
             <h2 className='payment-color text-center'>Payment:{purchaseId}</h2><br /><br />
             
-            <h4 className='text-primary'>Pay: $</h4>
+            
             <button>purchase</button>
             
             

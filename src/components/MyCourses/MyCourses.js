@@ -44,10 +44,11 @@ const MyCourses = () => {
             <div >
                 <table className="table table-borderless  text-white "  >
                     <thead  style={{ background: `linear-gradient(to right, #808080,#808080) ` }}>
-                        <tr>
+                        <tr >
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Address</th>
+                            <th scope="col">course</th>
+                            <th scope="col">price</th>
                             <th scope="col">Action</th>
                             <th scope="col">Cancel</th>
                         </tr>
@@ -61,7 +62,8 @@ const MyCourses = () => {
                                 <tr style={{ background: `linear-gradient(to right, #808080,#808080) ` }}>
                                     <td>{pd?.name}</td>
                                     <td>{pd?.email}</td>
-                                    <td>{pd?.Address}</td>
+                                    <td>{pd?.course}</td>
+                                    <td>{pd?.price}</td>
                                     <td>{pd.payment?"paid":
                                     <Link to ={`payment/${pd._id}`}> <button>Pay</button></Link>
                                     }</td>

@@ -14,6 +14,7 @@ import AdminRoute from '../../AdminRoute/AdminRoute';
 import ManageTeachers from '../../ManageTeachers.js/ManageTeachers';
 import Payment from './Payment/Payment'
 import ManageAdmin from '../../ManageAdmin/ManageAdmin';
+import Users from './Users';
 
 
 
@@ -46,6 +47,10 @@ const Dashboard = () => {
            <ul className='list'>
             {admin && <div className='back' >
                 <li ><br />
+
+              <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3"> 
+                <Link to={`${url}/users`} className="nav-link text-black text-nowrap text-center"> All Users </Link>
+             </button> <br />
 
               <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3"> 
                 <Link to={`${url}/addcourse`} className="nav-link text-black text-nowrap text-center">Add Course </Link>
@@ -94,6 +99,9 @@ const Dashboard = () => {
                  <Review></Review>
              </Route>
           
+          <AdminRoute path={`${path}/users`}>
+                     <Users></Users>
+                 </AdminRoute>
           <AdminRoute path={`${path}/manageAllOrders`}>
                      <ManageAllCourses></ManageAllCourses>
                  </AdminRoute>

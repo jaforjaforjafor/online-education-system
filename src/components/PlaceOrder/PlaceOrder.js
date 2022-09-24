@@ -3,7 +3,8 @@ import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
 import './PlaceOrder.css'
 
-const PlaceOrder = () => {
+const PlaceOrder = (props) => {
+    
     const { user } = useAuth();
 
     const { register, trigger, handleSubmit, reset, formState: { errors }, } = useForm();
@@ -39,14 +40,41 @@ const PlaceOrder = () => {
             <div className="container ">
                 <div className="row  justify-content-sm-center ">
                     <div className="col-sm-12 shadow round pb-3">
-                        <h1 className=" text-secondary">Course Order Form</h1>
+                        
+
                         <form onSubmit={handleSubmit(onSubmit)}>
+                        <h1 >course:<span className=" text-primary">{props.courses}</span></h1>
+                        <img src={props.image} alt="" />
+                        
+
+                            <div className="form-group ">
+                                <label className="col-form-label"></label>
+                                <input 
+                                    type="text"
+                                    placeholder='course'
+                                    value={props.courses}
+                                    className={`form-control `}
+                                    {...register("course", )}
+                                    
+                                />
+                                </div>
                             <div className="form-group">
                                 <label className="col-form-label"></label>
-                                <input disabled
+                                <input 
+                                    type="text"
+                                    placeholder='price'
+                                    value={props.price}
+                                    className={`form-control `}
+                                    {...register("price", )}
+                                    
+                                />
+                                </div>
+                            <div className="form-group">
+                                <label className="col-form-label"></label>
+                                <input 
                                     type="text"
                                     placeholder='name'
-                                    defaultValue={user.displayName}
+                                    value={user.displayName}
                                     className={`form-control `}
                                     {...register("name", )}
                                     
@@ -56,10 +84,10 @@ const PlaceOrder = () => {
 
                             <div className="form-group">
                                 <label className="col-form-label"></label>
-                                <input disabled
+                                <input 
                                     type="text"
                                     placeholder='Email'
-                                    defaultValue={user.email}
+                                    value={user.email}
                                     className={`form-control `}
                                     {...register("email", {
                                         
@@ -73,9 +101,9 @@ const PlaceOrder = () => {
 
                             <div className="form-group">
                                 <label className="col-form-label"></label>
-                                <input disabled 
+                                <input 
                                     placeholder="date"
-                                    defaultValue={new Date().toDateString()}
+                                    value={new Date().toDateString()}
                                     className={`form-control `}
                                     {...register("date", )}
                                     
