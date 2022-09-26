@@ -1,4 +1,3 @@
-import { getAuth, sendPasswordResetEmail,  } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
@@ -9,20 +8,14 @@ import loginRightPic from '../Images/education pic.jpg';
 
 const Login = () => {
     const [loginData,setLoginData]=useState({});
-    const [email, setEmail] = useState('');
-    const auth = getAuth();
     
 
-    sendPasswordResetEmail(auth, email)
-      .then(() => {
-        // Password reset email sent!
-        // .. 
-        })
+   
       
     
     
     
-    const { user, loginUser, isLoading, signInWithGoogle, authError } = useAuth();
+    const { user, loginUser, isLoading, signInWithGoogle, authError,verifyPass} = useAuth();
     
     
    
@@ -40,35 +33,23 @@ const Login = () => {
         e.preventDefault();
     };
     
+    
+        
+
     const handleGoogleLogin=()=>{
         signInWithGoogle(location,history);
-        
-        
-       
-       
 
-
-// const processLogin=(email,password)=>{
-//     signInWithEmailAndPassword(auth, email, password)
-//     .then(result =>{
-//         const user =result.user;
-//         console.log(user);
-//     })
-//     .catch((error) => {
-//     setError( error.message);
-//       });
-// }
 
   
   
   
     };
-    const handleResetPassword=()=>{
-        sendPasswordResetEmail(auth.email)
-         .then(result=>{
-            console.log(result);
-         })
-    };
+    const handleResetPass=()=>{
+        verifyPass();
+        
+    }
+   
+    
     return (
         <div className="container mt-4 bg-dark w-50" style={{ background: `linear-gradient(to right, #e6dada, #274046)` }}>
             {isLoading && <div className="spinner-border text-info text-center" role="status">
@@ -86,10 +67,11 @@ const Login = () => {
                 <input type="password" name="password" onChange={handleOnChange} id="" placeholder='Enter Your password ' />
                 <br /><br />
                 <input  className="submit-login" type="submit" value="submit" /><br /><br />
-                <button type='button' onClick={sendPasswordResetEmail} className='btn btn-secondary btn-sm '>Reset Password</button>
+                <button type='button' onClick={handleResetPass} className='btn btn-secondary btn-sm '>Reset Password</button>
                 {user?.email && <div className="alert alert-success" role="alert">
                     
                 user  is login </div>}
+                
                
                     {authError}
                 

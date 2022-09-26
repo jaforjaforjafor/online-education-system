@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import initializeFirebase from "../Firebase/firebase.init";
-import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signInWithPopup, GoogleAuthProvider,sendEmailVerification,sendPasswordResetEmail } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signInWithPopup, GoogleAuthProvider,sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 
 
 initializeFirebase();
@@ -8,6 +8,8 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsloading] = useState(true);
     const [authError, setAuthError] = useState('');
+    const [email, setEmail] = useState('');
+
     const [error, setError] = useState('');
     const [admin, setAdmin] = useState(false);
 
@@ -49,17 +51,25 @@ const useFirebase = () => {
             console.log(result);
          })
     };
+    const verifyPass=()=>{
+        sendPasswordResetEmail(auth,email)
+        .then(()=>{
+            console.log("password verificiation send");
+        })
+    }
+    
+    
     
 
     const loginUser = (email, password, location, history) => {
         setIsloading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                verifyPassword();
                 const destination = location?.state?.from || '/';
                 history.replace(destination);
                 setError('');
                 setAuthError('');
+                verifyPass();
                 
             })
             .catch((error) => {
@@ -71,10 +81,7 @@ const useFirebase = () => {
             .finally(() => setIsloading(false));
 
     };
-    const verifyPassword=()=>{
-        
-    };
-
+  
     useEffect(() => {
         const unSubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -140,7 +147,7 @@ const useFirebase = () => {
     return {
         user,
         verifyEmail,
-        verifyPassword,
+        verifyPass,
         admin,
         error,
         authError,

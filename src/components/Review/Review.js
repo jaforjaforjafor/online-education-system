@@ -40,15 +40,11 @@ const Review = () => {
                             <br />
 
                             <input {...register("email", { required: true })}
-                                defaultValue={user.email}
+                                value={user.email}
                                 placeholder="Email"
                                 className="p-2 m-2 w-100" />
                             <br />
 
-                            <input disabled {...register("image", { required: true })}
-                                placeholder="image"
-                                className="p-2 m-2 w-100" />
-                            <br />
 
                             <textarea {...register("Description", { required: true })}
                                 placeholder="Description"
