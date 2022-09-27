@@ -48,9 +48,9 @@ const Dashboard = () => {
             {admin && <div className='back' >
                 <li ><br />
 
-              <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3"> 
+              {/* <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3"> 
                 <Link to={`${url}/users`} className="nav-link text-black text-nowrap text-center"> All Users </Link>
-             </button> <br />
+             </button> <br /> */}
 
               <button className=" btn-light rounded-pill border-0 mt-2 w-50 fs-3"> 
                 <Link to={`${url}/addcourse`} className="nav-link text-black text-nowrap text-center">Add Course </Link>

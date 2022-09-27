@@ -34,7 +34,7 @@ const CheckoutForm = ({payment}) => {
             return;
           }
           const card = elements.getElement(CardElement);
-          if (card == null) {
+          if (card === null) {
             return;
           }
           const {error,paymentMethod}=await stripe.createPaymentMethod({

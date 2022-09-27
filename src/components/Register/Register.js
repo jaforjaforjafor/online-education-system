@@ -24,11 +24,10 @@ const Register = () => {
 
     const handleLoginSubmit = e => {
 
-        // if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(loginData.email)){
-        //     alert('need to vaild expression of email');
-        //     return
-        // }
-        
+        //  if(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/.test(loginData.email)){
+        //      alert('need to vaild expression of email');
+        //      return
+        //  }
         if(loginData.password !== loginData.password2){
             alert('password did not match');
             return
