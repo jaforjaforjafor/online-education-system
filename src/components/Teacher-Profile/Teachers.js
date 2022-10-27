@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CourseDetails from '../CourseDetails/CourseDetails';
 import Teacher from '../Teacher/Teacher';
 import './Teachers.css';
 
@@ -22,9 +23,8 @@ const Teachers = () => {
         { 
         teachers.map(teacher=><Teacher
         key={teacher._id}
-          teacher={teacher}></Teacher> )
-        
-        }
+          teacher={teacher}></Teacher>)}
+         
 
       </div>
       <br /><br />

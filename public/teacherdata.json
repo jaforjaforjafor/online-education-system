@@ -1,79 +1,72 @@
 [ 
     {
         "_id":1,
-   "name":"shafi sir",
-   "image":"https://previews.123rf.com/images/elenaistomina/elenaistomina2007/elenaistomina200700035/152064733-.jpg?fj=1",
-   "email":"raselit@gmail.com",
-   "designation":"senior lecturer",
-   "expert": "html,css,php,"
-
+        "Name":"Ranit",
+        "Classes":"Phython",
+        "Day":"Sun-Mon",
+        "slot":"1:00-3:00"
+  
 },
     {
         "_id":2,
-   "name":"Shahed Sir",
-   "image":"https://previews.123rf.com/images/kakigori/kakigori1901/kakigori190100069/120373264-male-teacher-in-classroom-teaching-lesson-pointing-at-greenboard.jpg?fj=1",
-   "email":"Shahedsir@gmail.com",
-   "designation":"senior lecturer",
-   "expert": "programming, c++"
+        "Name":"Abdullah",
+        "Classes":"Phython",
+        "Day":"Sun-Mon",
+        "slot":"1:00-3:00"
 
 },
     {
         "_id":3,
-   "name":"Nipa Mam",
-   "image":"https://previews.123rf.com/images/kakigori/kakigori1901/kakigori190100069/120373264-male-teacher-in-classroom-teaching-lesson-pointing-at-greenboard.jpg?fj=1",
-   "email":"NipaMam@gmail.com",
-   "designation":"senior lecturer",
-   "expert": "html,css,php,"
+        "Classes":"Phython",
+        "Name":"hanif",
+        "Day":"Sun-Mon",
+        "slot":"1:00-3:00"
 
 },
     {
         "_id":4,
-   "name":"mehedi sir",
-   "image":"https://previews.123rf.com/images/kakigori/kakigori1901/kakigori190100069/120373264-male-teacher-in-classroom-teaching-lesson-pointing-at-greenboard.jpg?fj=1",
-   "email":"mehedisir@gmail.com",
-   "designation":"senior lecturer",
-   "expert": "compiler,"
+        "Classes":"Phython",
+        "Name":"Ranit",
+        "Day":"Sun-Mon",
+        "slot":"1:00-3:00"
 
 },
     {
         "_id":5,
-   "name":"shafin sir",
-   "image":"https://previews.123rf.com/images/kakigori/kakigori1901/kakigori190100069/120373264-male-teacher-in-classroom-teaching-lesson-pointing-at-greenboard.jpg?fj=1",
-   "email":"shafinsir@gmail.com",
-   "designation":"senior lecturer",
-   "expert": "html,css,php,"
+        "Classes":"Phython",
+        "Name":"Ranit",
+        "Day":"Sun-Mon",
+        "slot":"1:00-3:00"
 
 },
     {
         "_id":6,
-   "name":"shafi sir",
-   "image":"https://previews.123rf.com/images/kakigori/kakigori1901/kakigori190100069/120373264-male-teacher-in-classroom-teaching-lesson-pointing-at-greenboard.jpg?fj=1",
-   "email":"raselit@gmail.com",
-   "designation":"senior lecturer"
+        "Classes":"Phython",
+        "Name":"Ranit",
+        "Day":"Sun-Mon",
+        "slot":"1:00-3:00"
 
 },
     {
         "_id":7,
-   "name":"shafi sir",
-   "image":"https://previews.123rf.com/images/kakigori/kakigori1901/kakigori190100069/120373264-male-teacher-in-classroom-teaching-lesson-pointing-at-greenboard.jpg?fj=1",
-   "email":"raselit@gmail.com",
-   "designation":"senior lecturer"
-
+        "Classes":"Phython",
+        "Name":"Ranit",
+        "Day":"Sun-Mon",
+        "slot":"1:00-3:00"
 },
     {
         "_id":8,
-   "name":"shafi sir",
-   "image":"https://previews.123rf.com/images/kakigori/kakigori1901/kakigori190100069/120373264-male-teacher-in-classroom-teaching-lesson-pointing-at-greenboard.jpg?fj=1",
-   "email":"raselit@gmail.com",
-   "designation":"senior lecturer"
-
+        "Classes":"Phython",
+        "Name":"Ranit",
+        "Day":"Sun-Mon",
+        "slot":"1:00-3:00"
 },
 {
     "_id":9,
-"name":"mondolli madam",
-"image":"https://previews.123rf.com/images/kakigori/kakigori1901/kakigori190100069/120373264-male-teacher-in-classroom-teaching-lesson-pointing-at-greenboard.jpg?fj=1",
-"email":"mondolli@gmail.com",
-"designation":"senior lecturer"
+    "Classes":"Phython",
+    "Name":"Ranit",
+    "Day":"Sun-Mon",
+    "slot":"1:00-3:00"
 
 }
 

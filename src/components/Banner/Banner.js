@@ -15,12 +15,17 @@ const Banner = () => {
       className="banner-item-1"
       src={pogo}
       alt="First slide"
-      width='200px'
+      width='100px'
+      height='100%'
       
     />
     <Carousel.Caption>
-      <h3>Online Education </h3>
-      <p>New way of education system.</p>
+      <h3 style={{
+        color:'black',
+      }}>Online Education </h3>
+      <p className='fs-4' style={{
+        color:'black',
+      }}>New way of education system.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>

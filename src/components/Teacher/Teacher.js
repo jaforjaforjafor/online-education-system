@@ -10,13 +10,13 @@ const Teacher = (props) => {
         <div className="card h-100   shadow-lg" >
             <img src={img} className="card-img-top" width="450" height="150" alt="..." />
             <div className="card-body h-100 w-400">
-                <h2>Name:{teachers}</h2>
+                <h2>Name:<span style={{'color':'navy'}}> {teachers}</span></h2>
                 <h5 className="card-title">Email:{email}</h5>
                 <p className="card-text"> <strong>Designation:</strong> {designation}</p>
                 <p className="text-nowrap"><strong >expert:</strong>{expert}</p>
                 <Link to={`/service/${_id}`}>
                 <button className="btn btn-dark"><img  alt="" width="25" />
-                 contact {teachers}</button>
+                 Contact {teachers}</button>
                 </Link>
                
             </div>

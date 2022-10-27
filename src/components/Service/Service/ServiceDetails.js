@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import './ServiceDetails.css';
 
 const ServiceDetails = () => {
+    const history = useHistory();
+    const goBack = () => {
+        history.goBack()
+      }
+      
+
     
     const {id}=useParams();
     const[serviceDetails,setServiceDetails]=useState([]);
@@ -14,7 +20,7 @@ const ServiceDetails = () => {
                 setServiceDetails(foundService);
             })
     }, [])
-    const { teachers, designation, img, email,expert } = serviceDetails[0] || {};
+    const {_id, teachers, designation, img, email,expert } = serviceDetails[0] || {};
     
 
     return (
@@ -35,7 +41,13 @@ const ServiceDetails = () => {
                             <p className="text-nowrap"><strong >email:{email}</strong>  </p>
                             <p className="text-nowrap"><strong >expert:{expert}</strong>  </p>
                             
-                            <a href="https://mail.google.com">Contact Me </a>
+                            <Link to={`/myclasses/${_id}`}
+                            serviceDetails={serviceDetails}
+                            >
+                <button className="btn btn-dark"><img  alt="" width="25" />
+                 My Classes</button>
+                </Link>
+               
 
                     
                         </div>
@@ -49,8 +61,9 @@ const ServiceDetails = () => {
             
 
         </div>
-        <div >
-        <button className="btn btn-light fs-4  "><Link to="/home"  >Go to Home</Link></button>
+        <br />
+        <div ><br />
+        <button className="btn btn-dark fs-4  " onClick={goBack}> Back</button>
         </div>
 
         </div>
